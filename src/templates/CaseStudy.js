@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
-import Gallery from '../components/Gallery';
+import Gallery from '../components/common/Gallery';
 
 const CaseStudyTemplate = ({ data, pathContext }) => {
   const { markdownRemark: caseStudy, galleriesJson: gallery } = data;

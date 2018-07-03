@@ -1,0 +1,77 @@
+@import 'vendor/normalize'
+@import 'variables/colors'
+@import 'variables/typography'
+
+@import url('https://use.typekit.net/axw1iqn.css')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300')
+
+html
+  font-size: 16px
+  line-height: 1.5
+
+body
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background: $color-background
+  overflow-x: hidden
+
+body,
+input,
+textarea,
+select,
+button
+  font-family: $font-family-default
+  font-weight: $font-weight-light
+  color: $color-text
+
+*
+  box-sizing: border-box
+
+a
+  color: $color-link
+  text-decoration: none
+  transition: color 0.15s linear
+  outline: none
+
+::selection
+  color: $color-background
+  background: $color-secondary
+
+h1
+  font-family: $font-family-titles
+  font-weight: $font-weight-heavy
+  color: $color-primary
+  margin: 0 0 1rem
+
+h2
+  font-family: $font-family-titles
+  font-weight: $font-weight-heavy
+  color: $color-primary
+  margin: 0 0 1rem
+
+h3
+  font-family: $font-family-titles
+  font-weight: $font-weight-heavy
+  color: $color-primary
+  margin: 0 0 1rem
+
+h4
+  font-family: $font-family-titles
+  font-weight: $font-weight-heavy
+  color: $color-primary
+  margin: 0 0 1rem
+
+p
+  font-weight: $font-weight-light
+  color: $color-primary
+  margin: 0 0 1rem
+
+iframe,
+embed,
+video,
+svg,
+img
+  width: 100%
+  vertical-align: bottom

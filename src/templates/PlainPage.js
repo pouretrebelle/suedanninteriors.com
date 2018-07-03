@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
-import Gallery from '../components/Gallery';
+import Gallery from '../components/common/Gallery';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;

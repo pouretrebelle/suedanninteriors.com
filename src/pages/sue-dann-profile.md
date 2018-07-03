@@ -1,6 +1,6 @@
 ---
 type: 'plain-page'
-slug: 'profile'
+slug: 'sue-dann-profile'
 title: 'Sue Dann Profile'
 sidebar: 'cover.jpg'
 ---

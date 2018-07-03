@@ -1,5 +1,4 @@
 ---
-type: 'plain-page'
 slug: 'domestic'
 title: 'Domestic'
 ---
@@ -18,4 +17,4 @@ We can create stunning Contemporary Interiors as well as Stylish Elegant more Cl
 
 Alternatively you may just be looking for that one lamp or rug to finish off your own schemes.
 
-We carry a large range of top fabrics, lighting, rugs and furniture - see our products page.
+We carry a large range of top fabrics, lighting, rugs and furniture - [see our products page](/products).

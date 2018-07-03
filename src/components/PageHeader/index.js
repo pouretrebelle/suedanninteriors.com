@@ -8,7 +8,11 @@ class PageHeader extends Component {
   }
 
   render() {
-    return <div className={styles.header}>Header</div>;
+    return (
+      <div className={styles.header}>
+        for all your interior design requirements
+      </div>
+    );
   }
 }
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './Gallery.module.sass';
+
 class Gallery extends Component {
   constructor(props) {
     super(props);
@@ -10,10 +12,10 @@ class Gallery extends Component {
     const { images } = this.props;
 
     return (
-      <div>
+      <div className={styles.grid}>
         {images.map((image, i) => (
-          <figure key={i}>
-            <img src={image.src} />
+          <figure key={i} className={styles.thumbnailWrapper}>
+            <img src={image.src} className={styles.thumbnail} />
             <p>{image.title}</p>
           </figure>
         ))}

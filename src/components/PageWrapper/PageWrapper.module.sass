@@ -1,2 +1,25 @@
+// @require '../../styles/mixins/responsive'
+$color-accent-cream: #eeeeba
+
+=bp($start)
+  @media (min-width: 500px)
+    @content
+
+.pageWrapper
+  max-width: 1000px
+  padding: 0 1rem
+  margin: 0 auto
+  +bp('tablet')
+    display: flex
+
+.navigation
+  +bp('tablet')
+    width: 20%
+
 .mainWrapper
-  background: green
+  +bp('tablet')
+    width: 80%
+
+.contentWrapper
+  background: $color-accent-cream
+  padding: 2rem

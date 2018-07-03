@@ -17,18 +17,20 @@ class PageWrapper extends Component {
     const { children, title } = this.props;
 
     return (
-      <div className={styles.pageWrapper}>
+      <div>
         <Helmet title={title} />
         <PageHeader />
 
-        <div className={styles.mainWrapper}>
+        <div className={styles.pageWrapper}>
           <aside className={styles.navigation}>
             <Navigation />
           </aside>
 
-          <div className={styles.contentWrapper}>
-            <h1>{title}</h1>
-            {children}
+          <div className={styles.mainWrapper}>
+            <div className={styles.contentWrapper}>
+              <h1>{title}</h1>
+              {children}
+            </div>
           </div>
         </div>
 

@@ -1,9 +1,9 @@
-const path = require('path')
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
-  const caseStudyTemplate = path.resolve(`src/templates/case-study.js`)
+  const caseStudyTemplate = path.resolve(`src/templates/case-study.js`);
 
   return graphql(`
     {
@@ -23,9 +23,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors)
+      return Promise.reject(result.errors);
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log(node);
       switch (node.frontmatter.type) {
         case 'case-study':
           createPage({
@@ -34,9 +35,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             context: {
               slug: node.frontmatter.slug,
             }, // additional data can be passed via context
-          })
-          break
+          });
+          break;
       }
-    })
-  })
-}
+    });
+  });
+};

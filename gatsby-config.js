@@ -7,20 +7,27 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
         name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data/`,
       },
     },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
+        plugins: ['gatsby-remark-images'],
       },
     },
     {
       resolve: 'gatsby-transformer-json',
     },
   ],
-}
+};

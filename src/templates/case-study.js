@@ -1,25 +1,32 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
 // import '../css/blog-post.css'; // make it pretty!
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query we'll write in a bit
-}) {
-  const { markdownRemark: post } = data // data.markdownRemark holds our post data
+const CaseStudyTemplate = ({ data, pathContext }) => {
+  const { markdownRemark: caseStudy, galleriesJson: gallery } = data;
+  const { slug } = pathContext;
+
   return (
     <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+      <Helmet title={`Your Blog Name - ${caseStudy.frontmatter.title}`} />
       <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{caseStudy.frontmatter.title}</h1>
         <div
           className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: caseStudy.html }}
         />
       </div>
+
+      {gallery.images.map((image, i) => (
+        <figure key={i}>
+          <img src={require(`../assets/images/${slug}/${image.path}`)} />
+          <p>{image.title}</p>
+        </figure>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query CaseStudyBySlug($slug: String!) {
@@ -31,5 +38,13 @@ export const pageQuery = graphql`
         title
       }
     }
+    galleriesJson(slug: { eq: $slug }) {
+      images {
+        title
+        path
+      }
+    }
   }
-`
+`;
+
+export default CaseStudyTemplate;

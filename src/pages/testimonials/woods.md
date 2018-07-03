@@ -1,4 +1,5 @@
 ---
+type: 'testimonial'
 name: Mr & Mrs Woods
 address: Wellow, Somerset
 ---

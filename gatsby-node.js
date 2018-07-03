@@ -3,7 +3,9 @@ const path = require('path');
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const caseStudyTemplate = path.resolve(`src/templates/case-study.js`);
+  const CaseStudyTemplate = path.resolve(`src/templates/CaseStudy.js`);
+  const GalleryPageTemplate = path.resolve(`src/templates/GalleryPage.js`);
+  const PlainPageTemplate = path.resolve(`src/templates/PlainPage.js`);
 
   return graphql(`
     {
@@ -30,11 +32,29 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       switch (node.frontmatter.type) {
         case 'case-study':
           createPage({
-            path: `/domestic/case/${node.frontmatter.slug}`,
-            component: caseStudyTemplate,
+            path: `/case-study/${node.frontmatter.slug}`,
+            component: CaseStudyTemplate,
             context: {
               slug: node.frontmatter.slug,
             }, // additional data can be passed via context
+          });
+          break;
+        case 'gallery-page':
+          createPage({
+            path: `/${node.frontmatter.slug}`,
+            component: GalleryPageTemplate,
+            context: {
+              slug: node.frontmatter.slug,
+            },
+          });
+          break;
+        case 'plain-page':
+          createPage({
+            path: `/${node.frontmatter.slug}`,
+            component: PlainPageTemplate,
+            context: {
+              slug: node.frontmatter.slug,
+            },
           });
           break;
       }

@@ -1,4 +1,5 @@
 ---
+type: 'testimonial'
 name: Nick Sonley, Operations & Development Director, Zola Hotels
 address: Central Office, 30 High Street, Old Amersham, Bucks, HP7 0DJ
 ---

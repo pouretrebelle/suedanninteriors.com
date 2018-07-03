@@ -1,4 +1,5 @@
 ---
+type: 'testimonial'
 name: Janet Singleton and Richard Moffatt
 address: Rode, Somerset
 ---

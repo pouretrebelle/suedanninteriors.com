@@ -1,4 +1,5 @@
 ---
+type: 'testimonial'
 name: Mr & Mrs eve
 address: Sydney Place, Bath
 ---

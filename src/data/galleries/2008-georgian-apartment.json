@@ -1,0 +1,48 @@
+{
+  "slug": "2008-georgian-apartment",
+  "images": [{
+      "path": "dom4d.jpg",
+      "title": "Entrance hall"
+    },
+    {
+      "path": "dom4j.jpg",
+      "title": "Sitting room to kitchen"
+    },
+    {
+      "path": "dom4k.jpg",
+      "title": "Sitting room with motorised blinds to very large window"
+    },
+    {
+      "path": "dom4b.jpg",
+      "title": "Bespoke dining table"
+    },
+    {
+      "path": "dom4g.jpg",
+      "title": "Kitchen"
+    },
+    {
+      "path": "dom4i.jpg",
+      "title": "Master bedroom with full length satin curtains"
+    },
+    {
+      "path": "dom4h.jpg",
+      "title": "Master bedroom headboard and cushions"
+    },
+    {
+      "path": "dom4c.jpg",
+      "title": "Bespoke walnut wardrobe"
+    },
+    {
+      "path": "dom4f.jpg",
+      "title": "Guest bedroom"
+    },
+    {
+      "path": "dom4e.jpg",
+      "title": "Guest bedroom details"
+    },
+    {
+      "path": "dom4a.jpg",
+      "title": "Bathroom"
+    }
+  ]
+}

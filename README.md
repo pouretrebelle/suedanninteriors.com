@@ -1,4 +1,4 @@
-# suedanninteriors.com [Build Status](https://travis-ci.org/pouretrebelle/suedanninteriors.com.svg?branch=master)](https://travis-ci.org/pouretrebelle/suedanninteriors.com)
+# suedanninteriors.com [![Build Status](https://travis-ci.org/pouretrebelle/suedanninteriors.com.svg?branch=master)](https://travis-ci.org/pouretrebelle/suedanninteriors.com)
 
 ## :computer: Tech
 

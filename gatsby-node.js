@@ -28,7 +28,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log(node);
       switch (node.frontmatter.type) {
         case 'case-study':
           createPage({

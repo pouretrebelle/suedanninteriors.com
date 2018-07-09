@@ -18,21 +18,53 @@ class Gallery extends Component {
     super(props);
   }
 
+  componentWillUnmount() {
+    if (this.lightboxOpen) this.closeLightbox();
+  }
+
+  onKeyUpped = (e) => {
+    switch (e.keyCode) {
+      case 27: // ESC
+        this.closeLightbox();
+        break;
+
+      case 37: // left arrow
+        this.onPrevButtonClicked();
+        break;
+
+      case 39: // right arrow
+        this.onNextButtonClicked();
+        break;
+    }
+  }
+
   openLightbox = (index) => {
     this.lightboxOpen = true;
     this.lightboxImageIndex = index;
+    window.addEventListener('keyup', this.onKeyUpped);
   }
 
   closeLightbox = () => {
     this.lightboxOpen = false;
+    window.removeEventListener('keyup', this.onKeyUpped);
   }
 
   onNextButtonClicked = () => {
-    this.lightboxImageIndex++;
+    if (this.lightboxImageIndex === (this.props.images.length - 1)) {
+      this.lightboxImageIndex = 0;
+    }
+    else {
+      this.lightboxImageIndex++;
+    }
   }
 
   onPrevButtonClicked = () => {
-    this.lightboxImageIndex--;
+    if (this.lightboxImageIndex === 0) {
+      this.lightboxImageIndex = (this.props.images.length - 1);
+    }
+    else {
+      this.lightboxImageIndex--;
+    }
   }
 
   render() {
@@ -49,7 +81,7 @@ class Gallery extends Component {
               }}
             >
 
-            { this.lightboxImageIndex < images.length &&
+            { this.lightboxImageIndex < (images.length -1) &&
               <button onClick={this.onNextButtonClicked} className={styles.nextButton}>
                 Next
               </button>

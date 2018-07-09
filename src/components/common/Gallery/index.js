@@ -104,6 +104,7 @@ class Gallery extends Component {
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}
+                key={this.lightboxImageIndex}
               />
             </div>
             <div className={styles.captionWrapper}>

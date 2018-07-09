@@ -88,7 +88,7 @@ class Gallery extends Component {
             }
             { this.lightboxImageIndex > 0 &&
               <button onClick={this.onPrevButtonClicked} className={styles.prevButton}>
-                Previous
+                Prev
               </button>
             }
             <button onClick={this.closeLightbox} className={styles.closeButton}>

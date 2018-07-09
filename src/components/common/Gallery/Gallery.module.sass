@@ -1,3 +1,5 @@
+@import '../../../styles/variables/colors'
+  
 .grid
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
@@ -48,4 +50,69 @@
 
 .indicator
   font-size: 0.75rem
-  color: #ddd
+  color: $color-accent-grey
+
+.nextButton,
+.prevButton
+  position: absolute
+  top: 50%
+  width: 4rem
+  transform: translate(0, -50%)
+  font-size: 0.75rem
+  text-transform: uppercase
+  &:before
+    content: ''
+    display: block
+    width: 1rem
+    height: 1rem
+    border-style: solid
+    border-color: currentColor
+    border-width: 0.125rem 0.125rem 0 0
+    margin: 0 auto 1rem
+
+.nextButton
+  right: 2rem
+  &:before
+    transform: rotate(45deg) translate(-0.25rem, 0.25rem)
+
+.prevButton
+  left: 2rem
+  &:before
+    transform: rotate(-135deg) translate(-0.25rem, 0.25rem)
+
+.closeButton
+  position: absolute
+  top: 1rem
+  right: 1rem
+  width: 2rem
+  height: 2rem
+  font-size: 0
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 1.5rem
+    height: 0.125rem
+    background: currentColor
+    top: 0.9375rem
+    left: 0.25rem
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg)
+
+.nextButton,
+.prevButton,
+.closeButton
+  background: none
+  border: 0
+  outline: 0
+  cursor: pointer
+  color: $color-accent-grey
+  opacity: 0.6
+  transition: opacity 0.2s linear
+  &:focus
+    opacity: 0.8
+  &:active
+    opacity: 1

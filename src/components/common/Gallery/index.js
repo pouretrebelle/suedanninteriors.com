@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
 
@@ -15,7 +16,14 @@ class Gallery extends Component {
       <div className={styles.grid}>
         {images.map((image, i) => (
           <figure key={i} className={styles.thumbnailWrapper}>
-            <img src={image.src} className={styles.thumbnail} />
+            <img
+              src={buildCloudinaryImageUrl(image.path, {
+                w: 200,
+                h: 200,
+                c: 'fill',
+              })}
+              className={styles.thumbnail}
+            />
             <p>{image.title}</p>
           </figure>
         ))}
@@ -28,7 +36,7 @@ Gallery.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      src: PropTypes.string,
+      path: PropTypes.string,
     })
   ),
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import PageWrapper from '../components/PageWrapper';
-import Gallery from '../components/common/Gallery';
 
 const DomesticPage = ({ data, pathContext }) => {
   const { allMarkdownRemark: testimonials } = data;

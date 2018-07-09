@@ -116,3 +116,36 @@
     opacity: 0.8
   &:active
     opacity: 1
+
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -1rem
+  width: 2rem
+  height: 2rem
+  perspective: 200px
+  opacity: 0.6
+  &:before
+    display: block
+    content: ''
+    width: 50%
+    height: 50%
+    background: $color-accent-grey
+    animation-duration: 2s
+    animation-name: flipWalker
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+
+@keyframes flipWalker
+  0%
+    transform: translate(0, 0) rotateX(0) rotateY(0)
+  25%
+    transform: translate(100%, 0) rotateX(0) rotateY(180deg)
+  50%
+    transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg)
+  75%
+    transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg)
+  100%
+    transform:  translate(0, 0) rotateX(0) rotateY(360deg)

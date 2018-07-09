@@ -95,6 +95,8 @@ class Gallery extends Component {
               Close
             </button>
 
+            <div className={styles.loader} />
+
             <div className={styles.lightboxImageWrapper}>
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {

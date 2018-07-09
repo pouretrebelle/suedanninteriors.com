@@ -19,4 +19,4 @@ This project uses [Yarn](https://github.com/yarnpkg/yarn) for dependency managem
 
 ## :rocket: Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pouretrebelle/suedanninteriors.com)
+- `yarn run deploy` deploys the site to [Github Pages](https://pouretrebelle.github.io/suedanninteriors.com)

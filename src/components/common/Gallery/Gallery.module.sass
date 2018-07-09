@@ -1,3 +1,161 @@
+@import '../../../styles/variables/colors'
+@import '../../../styles/mixins/responsive'
+  
 .grid
   display: grid
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+  grid-gap: 0.5rem
+  margin-top: 2rem
+
+.thumbnailWrapper
+  margin: 0
+  cursor: pointer
+
+.lightbox
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1000
+  background: rgba(#000, 0.85)
+  cursor: pointer
+
+.lightboxImageWrapper
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 1rem 4rem 7rem
+  display: flex
+  justify-content: center
+  align-items: center
+  pointer-events: none
+  +bp('tablet')
+    padding: 2rem 6rem 8rem
+
+.lightboxImage
+  width: auto
+  max-width: 100%
+  pointer-events: auto
+
+.captionWrapper
+  position: absolute
+  bottom: 1rem
+  left: 0
+  width: 100%
+  text-align: center
+
+.caption
+  max-width: 25rem
+  margin: 0 auto 1rem
+  color: #fff
+
+.indicator
+  font-size: 0.75rem
+  color: $color-accent-grey
+
+.nextButton,
+.prevButton
+  position: absolute
+  top: 50%
+  width: 3rem
+  transform: translate(0, -50%)
+  margin-top: -2rem
+  font-size: 0.75rem
+  text-transform: uppercase
+  &:before
+    content: ''
+    display: block
+    width: 1rem
+    height: 1rem
+    border-style: solid
+    border-color: currentColor
+    border-width: 0.125rem 0.125rem 0 0
+    margin: 0 auto 1rem
+
+.nextButton
+  right: 0.5rem
+  +bp('tablet')
+    right: 2rem
+  &:before
+    transform: rotate(45deg) translate(-0.25rem, 0.25rem)
+
+.prevButton
+  left: 0.5rem
+  +bp('tablet')
+    left: 2rem
+  &:before
+    transform: rotate(-135deg) translate(-0.25rem, 0.25rem)
+
+.closeButton
+  position: absolute
+  top: 1rem
+  right: 1rem
+  width: 2rem
+  height: 2rem
+  font-size: 0
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 1.5rem
+    height: 0.125rem
+    background: currentColor
+    top: 0.9375rem
+    left: 0.25rem
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg)
+
+.nextButton,
+.prevButton,
+.closeButton
+  background: none
+  border: 0
+  outline: 0
+  cursor: pointer
+  color: $color-accent-grey
+  opacity: 0.6
+  transition: opacity 0.2s linear
+  z-index: 10
+  &:focus
+    opacity: 0.8
+  &:active
+    opacity: 1
+
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: -1rem
+  width: 2rem
+  height: 2rem
+  perspective: 200px
+  opacity: 0.6
+  &:before
+    display: block
+    content: ''
+    width: 50%
+    height: 50%
+    background: $color-accent-grey
+    animation-duration: 2s
+    animation-name: flipWalker
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+
+@keyframes flipWalker
+  0%
+    transform: translate(0, 0) rotateX(0) rotateY(0)
+  25%
+    transform: translate(100%, 0) rotateX(0) rotateY(180deg)
+  50%
+    transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg)
+  75%
+    transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg)
+  100%
+    transform:  translate(0, 0) rotateX(0) rotateY(360deg)

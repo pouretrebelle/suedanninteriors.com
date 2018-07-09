@@ -20,7 +20,7 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
       <Gallery
         images={gallery.images.map(image => ({
           title: image.title,
-          src: require(`../assets/images/${pageSlug}/${image.path}`),
+          path: `${pageSlug}/${image.path}`,
         }))}
       />
     </PageWrapper>

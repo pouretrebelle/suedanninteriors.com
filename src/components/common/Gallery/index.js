@@ -98,11 +98,19 @@ class Gallery extends Component {
             <div className={styles.lightboxImageWrapper}>
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
-                  h: UIStore.windowHeight - 100,
+                  h: UIStore.windowHeight - 160,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}
               />
+            </div>
+            <div className={styles.captionWrapper}>
+              <p className={styles.caption}>
+                {images[this.lightboxImageIndex].title}
+              </p>
+              <p className={styles.indicator}>
+              {(this.lightboxImageIndex + 1)} / {images.length}
+              </p>
             </div>
           </div>
         }

@@ -10,40 +10,44 @@ class Navigation extends Component {
 
   render() {
     return (
-      <div className={styles.navigation}>
-        <ul>
-          <h2>Services</h2>
-          <li>
-            <Link to={'/domestic'}>Domestic</Link>
+      <div className={styles.wrapper}>
+        <ul className={styles.navList}>
+          <h2 className={styles.navTitle}>Services</h2>
+          <li className={styles.navItem}>
+            <Link to="/domestic" className={styles.navLink}>Domestic</Link>
           </li>
-          <li>
-            <Link to={'/kitchens'}>Bespoke Kitchens</Link>
+          <li className={styles.navItem}>
+            <Link to="/kitchens" className={styles.navLink}>Bespoke Kitchens</Link>
           </li>
-          <li>
-            <Link to={'/commercial'}>Commercial</Link>
+          <li className={styles.navItem}>
+            <Link to="/commercial" className={styles.navLink}>Commercial</Link>
           </li>
-          <li>
-            <Link to={'/products'}>Products</Link>
-          </li>
-        </ul>
-        <ul>
-          <h2>Company</h2>
-          <li>
-            <Link to={'/ethos'}>Company Ethos</Link>
-          </li>
-          <li>
-            <Link to={'/sue-dann-profile'}>Sue Dann Profile</Link>
-          </li>
-          <li>
-            <Link to={'/testimonials'}>Testimonials</Link>
-          </li>
-          <li>
-            <Link to={'/press'}>Press</Link>
-          </li>
-          <li>
-            <Link to={'/contact'}>Contact</Link>
+          <li className={styles.navItem}>
+            <Link to="/products" className={styles.navLink}>Products</Link>
           </li>
         </ul>
+        <ul className={styles.navList}>
+          <h2 className={styles.navTitle}>Company</h2>
+          <li className={styles.navItem}>
+            <Link to="/ethos" className={styles.navLink}>Company Ethos</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/sue-dann-profile" className={styles.navLink}>Sue Dann Profile</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/testimonials" className={styles.navLink}>Testimonials</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/press" className={styles.navLink}>Press</Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to="/contact" className={styles.navLink}>Contact</Link>
+          </li>
+        </ul>
+
+        <p className={styles.slogan}>
+          for all your interior<br />design requirements
+        </p>
       </div>
     );
   }

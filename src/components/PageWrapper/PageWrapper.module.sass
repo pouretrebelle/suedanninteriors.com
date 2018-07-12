@@ -12,14 +12,22 @@
 
 .navigation
   +bp('tablet')
-    width: 20%
+    width: 25%
+    border-style: solid
+    border-width: 0 0 1px 1px
+    border-color: $color-accent-grey
 
 .mainWrapper
+  background: $color-accent-cream
   +bp('tablet')
-    width: 80%
+    width: 75%
 
 .contentWrapper
-  background: $color-accent-cream
   padding: 1rem
   +bp('mobile')
     padding: 2rem
+
+.logo
+  +bp('tablet')
+    margin-left: -1px
+    width: calc(100% + 1px)

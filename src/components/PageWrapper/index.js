@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
-import PageHeader from '../PageHeader';
 import PageFooter from '../PageFooter';
 import Navigation from '../Navigation';
 
@@ -19,10 +19,16 @@ class PageWrapper extends Component {
     return (
       <div>
         <Helmet title={title} />
-        <PageHeader />
 
         <div className={styles.pageWrapper}>
           <aside className={styles.navigation}>
+            <Link to="/">
+              <img
+                src={require('../../assets/logo.jpg')}
+                alt="Sue Dann Interiors"
+                className={styles.logo}
+              />
+            </Link>
             <Navigation />
           </aside>
 

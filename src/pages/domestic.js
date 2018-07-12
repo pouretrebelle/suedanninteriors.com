@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
 import PageWrapper from '../components/PageWrapper';
+import CaseStudy from '../components/pages/CaseStudy';
 
 const DomesticPage = ({ data, pathContext }) => {
   const { markdownRemark: pageData, allMarkdownRemark: caseStudies } = data;
@@ -15,15 +15,17 @@ const DomesticPage = ({ data, pathContext }) => {
         require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
       }
     >
-      <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
-
-      {caseStudies.edges.map((caseStudy, i) => (
-        <p key={i}>
-          <Link to={`/case-study/${caseStudy.node.frontmatter.slug}`}>
-            {caseStudy.node.frontmatter.title}
-          </Link>
-        </p>
-      ))}
+      <CaseStudy
+        studies={
+          caseStudies.edges.map((caseStudy, i) => ({
+            link: `/case-study/${caseStudy.node.frontmatter.slug}`,
+            title: caseStudy.node.frontmatter.title,
+            cover: `${caseStudy.node.frontmatter.slug}/${caseStudy.node.frontmatter.cover}`,
+          }))
+        }
+      >
+        <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      </CaseStudy>
     </PageWrapper>
   );
 };

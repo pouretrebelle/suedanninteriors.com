@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2004-converted-victorian-school'
 date: '2004'
 title: 'Converted Victorian School near Winchester'
-cover: 'cover.jpg'
+cover: 'dom5i.jpg'
 ---
 
 This Victorian School was converted into an impressive seven bedroom family home. We started work on the project before exchange of contracts. The original owner/developer had designed the kitchen but the buyers, our clients, were not happy with the layout so we were asked to redesign the kitchen and carried on to design the whole house.

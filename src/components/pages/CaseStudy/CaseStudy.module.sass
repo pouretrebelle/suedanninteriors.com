@@ -1,0 +1,37 @@
+@import '../../../styles/variables/colors'
+@import '../../../styles/variables/typography'
+@import '../../../styles/mixins/responsive'
+
+.wrapper
+  +bp('tablet')
+    display: flex
+    justify-content: space-between
+
+.content
+  flex: 1
+
+.studyList
+  list-style: none
+  margin: 2rem -1rem 0
+  padding: 0
+  flex: 1
+  +bp('mobile')
+    margin: 0 -2rem
+  +bp('tablet')
+    margin: 0 -2rem 0 2rem
+
+.studyItem
+  margin: 0 0 1.5rem
+  +bp('tablet')
+    margin: 0 0 2rem
+
+.studyTitle
+  color: $color-primary
+  margin: 0
+  +bp(0, 'mobile')
+    padding: 0.5rem 1rem
+    text-align: center
+  +bp('mobile')
+    padding: 1rem 2rem 0
+  +bp('tablet')
+    padding: 0.5rem 1rem 0 0

@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2011-period-cottage'
 date: '2011'
 title: 'Period Cottage near Bath'
-cover: 'cover.jpg'
+cover: 'dom2o.jpg'
 ---
 
 The interior of this pretty period cottage was very gloomy and claustrophobic. The sitting room led through to a dark kitchen which led through to a utility room. The elevated stepped garden could not be seen from the house. The master bedroom had fussy flowered wallpaper and views only of the neighbours.

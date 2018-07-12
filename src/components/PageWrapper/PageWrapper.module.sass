@@ -3,8 +3,10 @@
 
 .pageWrapper
   max-width: 1000px
-  padding: 0 1rem
+  padding: 0
   margin: 0 auto
+  +bp('mobile')
+    padding: 0 1rem
   +bp('tablet')
     display: flex
 
@@ -18,4 +20,6 @@
 
 .contentWrapper
   background: $color-accent-cream
-  padding: 2rem
+  padding: 1rem
+  +bp('mobile')
+    padding: 2rem

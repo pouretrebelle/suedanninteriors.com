@@ -1,6 +1,6 @@
 ---
 slug: 'domestic'
-title: 'Domestic'
+title: 'Domestic Interiors'
 ---
 
 We can help with every aspect of your Interior Design requirements for the home.

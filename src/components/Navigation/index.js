@@ -18,6 +18,7 @@ class Navigation extends Component {
               to="/domestic"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Domestic
             </Link>
@@ -27,6 +28,7 @@ class Navigation extends Component {
               to="/kitchens"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Bespoke Kitchens
             </Link>
@@ -36,6 +38,7 @@ class Navigation extends Component {
               to="/commercial"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Commercial
             </Link>
@@ -45,6 +48,7 @@ class Navigation extends Component {
               to="/products"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Products
             </Link>
@@ -57,6 +61,7 @@ class Navigation extends Component {
               to="/ethos"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Company Ethos
             </Link>
@@ -66,6 +71,7 @@ class Navigation extends Component {
               to="/sue-dann-profile"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Sue Dann Profile
             </Link>
@@ -75,6 +81,7 @@ class Navigation extends Component {
               to="/testimonials"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Testimonials
             </Link>
@@ -84,6 +91,7 @@ class Navigation extends Component {
               to="/press"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Press
             </Link>
@@ -93,6 +101,7 @@ class Navigation extends Component {
               to="/contact"
               className={styles.navLink}
               activeClassName={styles.navLinkActive}
+              exact={false}
             >
               Contact
             </Link>

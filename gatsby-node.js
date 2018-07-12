@@ -31,7 +31,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       switch (node.frontmatter.type) {
         case 'case-study':
           createPage({
-            path: `/case-study/${node.frontmatter.slug}`,
+            path: `/domestic/${node.frontmatter.slug}`,
             component: CaseStudyTemplate,
             context: {
               slug: node.frontmatter.slug,

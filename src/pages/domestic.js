@@ -18,7 +18,7 @@ const DomesticPage = ({ data, pathContext }) => {
       <CaseStudy
         studies={
           caseStudies.edges.map((caseStudy, i) => ({
-            link: `/case-study/${caseStudy.node.frontmatter.slug}`,
+            link: `/domestic/${caseStudy.node.frontmatter.slug}`,
             title: caseStudy.node.frontmatter.title,
             cover: `${caseStudy.node.frontmatter.slug}/${caseStudy.node.frontmatter.cover}`,
           }))

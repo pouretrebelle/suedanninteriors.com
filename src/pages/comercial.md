@@ -2,7 +2,7 @@
 type: 'gallery-page'
 slug: 'commercial'
 title: 'Hotels, Bars and Restaurants'
-cover: 'cover.jpg'
+cover: 'com06.jpg'
 ---
 
 We have worked on many Hotel, Restaurant and Bar projects from Castles in Wales to Grade II listed buildings in Buckinghamshire.

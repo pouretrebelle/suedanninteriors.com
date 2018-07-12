@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
 import PageFooter from '../PageFooter';
 import Navigation from '../Navigation';
@@ -14,7 +15,7 @@ class PageWrapper extends Component {
   }
 
   render() {
-    const { children, title } = this.props;
+    const { children, title, headerImage } = this.props;
 
     return (
       <div>
@@ -33,6 +34,15 @@ class PageWrapper extends Component {
           </aside>
 
           <div className={styles.mainWrapper}>
+            {headerImage &&
+              <img
+                src={buildCloudinaryImageUrl(headerImage, {
+                  w: 726,
+                  h: 242,
+                  c: 'fill',
+                })}
+              />
+            }
             <div className={styles.contentWrapper}>
               <h1>{title}</h1>
               {children}
@@ -49,6 +59,7 @@ class PageWrapper extends Component {
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  headerImage: PropTypes.string,
 };
 
 export default PageWrapper;

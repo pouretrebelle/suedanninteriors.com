@@ -12,7 +12,7 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
       title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
+        `${pageSlug}/${pageData.frontmatter.cover}`
       }
     >
       <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover
       }
     }
     galleriesJson(slug: { eq: $slug }) {

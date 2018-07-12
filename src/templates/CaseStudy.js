@@ -12,7 +12,7 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
       title={`Case Study: ${caseStudy.frontmatter.title}`}
       headerImage={
         caseStudy.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${caseStudy.frontmatter.cover}`)
+        `${pageSlug}/${caseStudy.frontmatter.cover}`
       }
     >
       <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover
       }
     }
     galleriesJson(slug: { eq: $slug }) {

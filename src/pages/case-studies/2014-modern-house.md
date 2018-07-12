@@ -2,8 +2,8 @@
 type: 'case-study'
 slug: '2014-modern-house'
 date: '2014'
-title: 'Period Cottage near Bath'
-cover: 'cover.jpg'
+title: 'Modern House in Berkshire'
+cover: 'dom7splash.jpg'
 ---
 
 The owners of this property wanted a contemporary but comfortable feel to this room. Careful planning was needed as space was limited and the room was needed to fulfil various roles.

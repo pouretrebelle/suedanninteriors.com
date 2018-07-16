@@ -11,6 +11,13 @@ class Navigation extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
+        <Link to="/">
+          <img
+            src={require('../../assets/logo.jpg')}
+            alt="Sue Dann Interiors"
+          />
+        </Link>
+
         <ul className={styles.navList}>
           <h2 className={styles.navTitle}>Services</h2>
           <li className={styles.navItem}>

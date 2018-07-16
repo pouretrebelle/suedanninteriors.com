@@ -8,7 +8,7 @@ const PageContent = ({ children }) => (
 );
 
 PageContent.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default PageContent;

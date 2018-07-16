@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
 import PageFooter from '../PageFooter';
-import PageTitle from '../PageTitle';
 import Navigation from '../Navigation';
 
 import styles from './PageWrapper.module.sass';
@@ -20,17 +17,8 @@ class PageWrapper extends Component {
 
     return (
       <div>
-        <Helmet title={title} />
-
         <div className={styles.pageWrapper}>
           <aside className={styles.navigation}>
-            <Link to="/">
-              <img
-                src={require('../../assets/logo.jpg')}
-                alt="Sue Dann Interiors"
-                className={styles.logo}
-              />
-            </Link>
             <Navigation />
           </aside>
 
@@ -45,7 +33,6 @@ class PageWrapper extends Component {
               />
             )}
             <div className={styles.contentWrapper}>
-              <PageTitle title={title} />
               {children}
             </div>
           </div>

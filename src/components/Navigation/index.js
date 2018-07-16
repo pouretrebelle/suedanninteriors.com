@@ -1,25 +1,51 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import { observable } from 'mobx';
+import { observer } from 'mobx-react';
+import classNames from 'classnames';
 
 import styles from './Navigation.module.sass';
 
+@observer
 class Navigation extends Component {
+
+  @observable mobileNavOpen = {
+    'services': false,
+    'domestic': false,
+  }
+
   constructor(props) {
     super(props);
   }
 
+  toggleNavList = (category) => {
+    this.mobileNavOpen[category] = !this.mobileNavOpen[category];
+  }
+
   render() {
+
+    const listClasses = (category) => classNames({
+      [styles.navList]: true,
+      [styles.navListOpen]: this.mobileNavOpen[category],
+      [styles.navListClosed]: !this.mobileNavOpen[category],
+    });
+
     return (
       <div className={styles.wrapper}>
-        <Link to="/">
+        <Link to="/" className={styles.logoWrapper}>
           <img
             src={require('../../assets/logo.jpg')}
             alt="Sue Dann Interiors"
           />
         </Link>
 
-        <ul className={styles.navList}>
-          <h2 className={styles.navTitle}>Services</h2>
+        <ul className={listClasses('services')}>
+          <h2
+            className={styles.navTitle}
+            onClick={() => this.toggleNavList('services')}
+          >
+            Services
+          </h2>
           <li className={styles.navItem}>
             <Link
               to="/domestic"
@@ -61,8 +87,14 @@ class Navigation extends Component {
             </Link>
           </li>
         </ul>
-        <ul className={styles.navList}>
-          <h2 className={styles.navTitle}>Company</h2>
+
+        <ul className={styles.navList} className={listClasses('company')}>
+          <h2
+            className={styles.navTitle}
+            onClick={() => this.toggleNavList('company')}
+          >
+            Company
+          </h2>
           <li className={styles.navItem}>
             <Link
               to="/ethos"

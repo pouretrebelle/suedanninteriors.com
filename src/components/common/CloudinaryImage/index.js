@@ -77,7 +77,7 @@ class CloudinaryImage extends Component {
     }
     const imageOptions = Object.assign({}, dimensions, options || {});
 
-    return (
+    const image = (
       <img
         ref={this.onImageMount}
         src={buildCloudinaryImageUrl(imagePath, imageOptions)}
@@ -85,6 +85,17 @@ class CloudinaryImage extends Component {
         className={imageClasses}
       />
     );
+
+    return aspectRatio ? (
+      <figure
+        className={styles.aspectRatioWrapper}
+        style={{
+          paddingBottom: `${Math.round(aspectRatio * 10000)/100}%`,
+        }}
+      >
+        {image}
+      </figure>
+    ) : image;
   }
 }
 

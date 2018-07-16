@@ -10,15 +10,13 @@ const PageHeader = ({ title, subtitle, headerImage }) => (
     <Helmet title={title} />
 
     {headerImage && (
-      <figure className={styles.headerImageWrapper}>
-        <CloudinaryImage
-          imagePath={headerImage}
-          aspectRatio={1/3}
-          options={{
-            c: 'fill',
-          }}
-        />
-      </figure>
+      <CloudinaryImage
+        imagePath={headerImage}
+        aspectRatio={1/3}
+        options={{
+          c: 'fill',
+        }}
+      />
     )}
 
     {subtitle &&

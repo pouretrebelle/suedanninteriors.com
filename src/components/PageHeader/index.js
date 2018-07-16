@@ -19,11 +19,13 @@ const PageHeader = ({ title, subtitle, headerImage }) => (
       />
     )}
 
-    {subtitle &&
-      <h2 className={styles.subtitle}>{subtitle}</h2>
-    }
+    <header className={styles.titleWrapper}>
+      {subtitle &&
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+      }
 
-    <h1 className={styles.title}>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
+    </header>
   </div>
 );
 

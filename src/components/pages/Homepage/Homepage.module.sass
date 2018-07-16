@@ -1,0 +1,21 @@
+@import '../../../styles/mixins/responsive'
+
+.grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 0
+  +bp('mobile')
+    grid-template-columns: 1fr 1fr 1fr
+
+.contentWrapper
+  padding: 1rem
+  grid-area: 1 / 1 / 2 / 3
+  +bp('mobile')
+    padding: 2rem
+    grid-area: 2 / 1 / 3 / 4
+  +bp('tablet')
+    grid-area: 2 / 1 / 5 / 3
+    font-size: 1.75vw
+    padding: 2rem 2rem 1rem
+  +bp('desktop')
+    font-size: 1rem
+    padding: calc(1rem + 1.6vw) calc(1rem + 1.6vw) 1rem

@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
 import classNames from 'classnames';
+import CloudinaryImage from '../common/CloudinaryImage';
 
 import styles from './Navigation.module.sass';
 
@@ -33,8 +34,9 @@ class Navigation extends Component {
     return (
       <div className={styles.wrapper}>
         <Link to="/" className={styles.logoWrapper}>
-          <img
-            src={require('../../assets/logo.jpg')}
+          <CloudinaryImage
+            imagePath="assets/logo.jpg"
+            aspectRatio={1}
             alt="Sue Dann Interiors"
           />
         </Link>
@@ -147,18 +149,20 @@ class Navigation extends Component {
           </li>
         </ul>
 
-        <p className={styles.slogan}>
-          for all your interior<br />design requirements
-        </p>
+        <div className={styles.slogan}>
+          <p>for all your interior<br />design requirements</p>
+        </div>
 
         <div className={styles.biidWrapper}>
           <a 
             href="http://www.biid.org.uk/member/sue-dann-interiors/"
             alt="Sue is a member of the British Institute of Interior Design"
           >
-            <img
-              src={require('../../assets/biid.png')}
-              className={styles.biidLogo}
+            <CloudinaryImage
+              imagePath="assets/biid.png"
+              options={{
+                w: 384,
+              }}
             />
           </a>
         </div>

@@ -2,23 +2,27 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observable } from 'mobx';
 import { observer, inject } from 'mobx-react';
+import classNames from 'classnames';
 import CloudinaryImage from '../CloudinaryImage';
 import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
-
-const PIXEL_RATIO = window.devicePixelRatio || 1;
 
 @inject('UIStore')
 @observer
 class Gallery extends Component {
 
   lightboxElement = undefined;
+  pixelRatio = 1;
   @observable lightboxOpen = false;
   @observable lightboxImageIndex = 0;
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.pixelRatio = window.devicePixelRatio || 1;
   }
 
   componentWillUnmount() {
@@ -81,7 +85,12 @@ class Gallery extends Component {
   }
 
   render() {
-    const { images, UIStore } = this.props;
+    const { images, UIStore, gridClassName, children } = this.props;
+
+    const gridClasses = classNames({
+      [styles.grid]: true,
+      [gridClassName]: !!gridClassName,
+    })
 
     return (
       <div>
@@ -114,7 +123,7 @@ class Gallery extends Component {
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
                   // round up to nearest 50
-                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * PIXEL_RATIO,
+                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * this.pixelRatio,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}
@@ -123,9 +132,9 @@ class Gallery extends Component {
               />
             </div>
             <div className={styles.captionWrapper}>
-              <p className={styles.caption}>
+              <div className={styles.caption}>
                 {images[this.lightboxImageIndex].title}
-              </p>
+              </div>
               <p className={styles.indicator}>
               {(this.lightboxImageIndex + 1)} / {images.length}
               </p>
@@ -133,7 +142,7 @@ class Gallery extends Component {
           </div>
         }
 
-        <div className={styles.grid}>
+        <div className={gridClasses}>
           {images.map((image, i) => (
             <figure key={i} className={styles.thumbnailWrapper}>
               <CloudinaryImage
@@ -147,6 +156,8 @@ class Gallery extends Component {
               />
             </figure>
           ))}
+
+          {children}
         </div>
       </div>
     );
@@ -160,6 +171,8 @@ Gallery.propTypes = {
       path: PropTypes.string,
     })
   ),
+  gridClassName: PropTypes.string,
+  children: PropTypes.node,
   UIStore: PropTypes.object,
 };
 

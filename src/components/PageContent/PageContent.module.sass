@@ -1,7 +1,10 @@
 @import '../../styles/mixins/responsive'
 
 .wrapper
-  max-width: 600px
   padding: 0 1rem 1rem
   +bp('mobile')
     padding: 0 2rem 2rem
+  +bp('desktop')
+    width: 60%
+    min-width: 600px
+    padding: 0 0 calc(1rem + 1.6vw) calc(1rem + 1.6vw)

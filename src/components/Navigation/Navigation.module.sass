@@ -25,8 +25,10 @@
     padding: 1rem
   +bp('mobile', 'tablet')
     flex: 1
+    padding: 1rem 0
   +bp('tablet')
     border-bottom: 1px solid $color-accent-grey
+    padding: 1.5rem 1rem
 
 +bp(0, 'mobile')
   .navList
@@ -56,9 +58,15 @@
 
 .navTitle
   margin: 0 0 0.5rem
+  +bp('desktop')
+    font-size: calc(0.75rem + 1.2vw)
 
 .navLink
   display: block
+  +bp('tablet')
+    padding: 0.25rem
+  +bp('desktop')
+    font-size: calc(0.5rem + 0.8vw)
 
 .navLinkActive
   position: relative
@@ -68,7 +76,7 @@
       content: ''
       display: block
       position: absolute
-      top: 0.25rem
+      top: 0.5rem
       right: -1rem
       width: 0
       height: 0
@@ -78,7 +86,7 @@
 
 .slogan
   margin: 0
-  padding: 2rem
+  padding: 2rem 2rem 0
   opacity: 0.75
   text-align: center
   font-size: 0.75rem
@@ -86,10 +94,9 @@
     display: none
 
 .biidWrapper
+  max-width: 16rem
   padding: 1rem 2rem
+  margin: 0 auto
   text-align: center
   +bp(0, 'tablet')
     display: none
-
-.biidLogo
-  max-width: 12rem

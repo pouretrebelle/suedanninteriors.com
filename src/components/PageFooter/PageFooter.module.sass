@@ -1,8 +1,10 @@
 @import '../../styles/variables/colors'
+@import '../../styles/mixins/responsive'
 
 .footer
   text-align: center
   margin: 2rem 0 1rem
+  padding: 0 1rem
   font-size: 0.75rem
 
 .footer p
@@ -10,3 +12,13 @@
 
 .footer a
   color: $color-accent-dark-yellow
+
+.biidWrapper
+  margin-top: 1rem
+  padding: 1rem
+  text-align: center
+  +bp('tablet')
+    display: none
+
+.biidLogo
+  max-width: 12rem

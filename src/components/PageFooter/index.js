@@ -23,6 +23,16 @@ class PageFooter extends Component {
             sue@suedanninteriors.com
           </a>
         </p>
+
+        <div className={styles.biidWrapper}>
+          <a href="http://www.biid.org.uk/member/sue-dann-interiors/">
+            <img
+              src={require('../../assets/biid.png')}
+              alt="Sue is a member of the British Institute of Interior Design"
+              className={styles.biidLogo}
+            />
+          </a>
+        </div>
       </div>
     );
   }

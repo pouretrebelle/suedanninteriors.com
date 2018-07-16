@@ -150,6 +150,18 @@ class Navigation extends Component {
         <p className={styles.slogan}>
           for all your interior<br />design requirements
         </p>
+
+        <div className={styles.biidWrapper}>
+          <a 
+            href="http://www.biid.org.uk/member/sue-dann-interiors/"
+            alt="Sue is a member of the British Institute of Interior Design"
+          >
+            <img
+              src={require('../../assets/biid.png')}
+              className={styles.biidLogo}
+            />
+          </a>
+        </div>
       </div>
     );
   }

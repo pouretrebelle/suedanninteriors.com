@@ -1,13 +1,33 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+import PageHeader from '../components/PageHeader';
+import PageContent from '../components/PageContent';
+import Homepage from '../components/pages/Homepage';
 
-export default IndexPage
+const IndexPage = ({ data, pathContext }) => {
+  const { galleriesJson: gallery } = data;
+
+  return (
+    <div>
+      <Homepage
+        slideshowImages={gallery.images.map(image => ({
+          title: image.title,
+          path: `kitchens/${image.path}`,
+        }))}
+      />
+    </div>
+  );
+};
+
+export const pageQuery = graphql`
+  query IndexPage {
+    galleriesJson(slug: { eq: "kitchens" }) {
+      images {
+        title
+        path
+      }
+    }
+  }
+`;
+
+export default IndexPage;

@@ -4,7 +4,7 @@
 @import 'mixins/responsive'
 
 @import url('https://use.typekit.net/axw1iqn.css')
-@import url('https://fonts.googleapis.com/css?family=Roboto:300')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400')
 
 html
   font-size: 16px
@@ -80,3 +80,11 @@ svg,
 img
   width: 100%
   vertical-align: bottom
+
+hr
+  border: 0
+  border-bottom: 1px solid $color-accent-blue
+  margin: 1.5rem 0
+  max-width: 600px
+  +bp('tablet')
+    margin: 2rem 0

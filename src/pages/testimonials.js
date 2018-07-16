@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import PageContent from '../components/PageContent';
-import PageTitle from '../components/PageTitle';
+import PageHeader from '../components/PageHeader';
 
 const DomesticPage = ({ data, pathContext }) => {
   const { allMarkdownRemark: testimonials } = data;
@@ -10,7 +10,7 @@ const DomesticPage = ({ data, pathContext }) => {
 
   return (
     <div>
-      <PageTitle title="Testimonials" />
+      <PageHeader title="Testimonials" />
 
       <PageContent>
         {testimonials.edges.map((testimonial, i) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PageTitle from '../components/PageTitle';
+import PageHeader from '../components/PageHeader';
 import PageContent from '../components/PageContent';
 import Gallery from '../components/common/Gallery';
 
@@ -10,7 +10,7 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
 
   return (
     <div>
-      <PageTitle
+      <PageHeader
         subtitle="Case Study"
         title={caseStudy.frontmatter.title}
         headerImage={

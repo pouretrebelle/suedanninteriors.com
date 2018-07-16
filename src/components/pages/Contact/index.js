@@ -2,14 +2,14 @@ import React from 'react';
 import { GOOGLE_MAPS_API_KEY } from '../../../constants/googleMaps';
 
 import PageContent from '../../PageContent';
-import PageTitle from '../../PageTitle';
+import PageHeader from '../../PageHeader';
 import GoogleMapEmbed from './GoogleMapEmbed';
 
 import styles from './Contact.module.sass';
 
 const ContactPage = () => (
   <div>
-    <PageTitle title="Contact" />
+    <PageHeader title="Contact" />
 
     <PageContent>
       <p>

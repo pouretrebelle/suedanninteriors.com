@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageContent from '../components/PageContent';
-import PageTitle from '../components/PageTitle';
+import PageHeader from '../components/PageHeader';
 import CaseStudy from '../components/pages/CaseStudy';
 
 const DomesticPage = ({ data, pathContext }) => {
@@ -10,7 +10,7 @@ const DomesticPage = ({ data, pathContext }) => {
 
   return (
     <div>
-      <PageTitle title={pageData.frontmatter.title}
+      <PageHeader title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
         require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)

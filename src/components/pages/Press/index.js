@@ -1,13 +1,13 @@
 import React from 'react';
 
 import PageContent from '../../PageContent';
-import PageTitle from '../../PageTitle';
+import PageHeader from '../../PageHeader';
 
 import styles from './Press.module.sass';
 
 const PressPage = () => (
   <div>
-    <PageTitle title="Press" />
+    <PageHeader title="Press" />
 
     <PageContent>
 

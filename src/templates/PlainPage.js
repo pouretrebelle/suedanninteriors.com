@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageContent from '../components/PageContent';
-import PageTitle from '../components/PageTitle';
+import PageHeader from '../components/PageHeader';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;
@@ -9,7 +9,7 @@ const PlainPageTemplate = ({ data, pathContext }) => {
 
   return (
     <div>
-      <PageTitle
+      <PageHeader
         title={pageData.frontmatter.title}
         headerImage={
           pageData.frontmatter.cover &&

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
-import styles from './PageTitle.module.sass';
+import styles from './PageHeader.module.sass';
 
-const PageTitle = ({ title, subtitle, headerImage }) => (
+const PageHeader = ({ title, subtitle, headerImage }) => (
   <div>
     <Helmet title={title} />
 
@@ -27,10 +27,10 @@ const PageTitle = ({ title, subtitle, headerImage }) => (
   </div>
 );
 
-PageTitle.propTypes = {
+PageHeader.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   headerImage: PropTypes.string,
 };
 
-export default PageTitle;
+export default PageHeader;

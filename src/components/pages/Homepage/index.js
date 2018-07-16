@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
+import Helmet from 'react-helmet';
 import Gallery from '../../common/Gallery';
 
 import styles from './Homepage.module.sass';
@@ -17,6 +18,8 @@ class Homepage extends Component {
 
     return (
       <div>
+        <Helmet title="Sue Dann Interiors" />
+
         <Gallery
           images={gridImages.slice(0, UIStore.windowWidth > 1200 ? 5 : 6)}
           gridClassName={styles.grid}

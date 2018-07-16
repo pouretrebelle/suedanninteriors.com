@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observable } from 'mobx';
 import { observer, inject } from 'mobx-react';
+import CloudinaryImage from '../CloudinaryImage';
 import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
+
+const PIXEL_RATIO = window.devicePixelRatio || 1;
 
 @inject('UIStore')
 @observer
@@ -67,6 +70,16 @@ class Gallery extends Component {
     }
   }
 
+  onLightboxImageClicked = (e) => {
+    const { UIStore } = this.props;
+    if (e.pageX > UIStore.windowWidth / 2) {
+      this.onNextButtonClicked();
+    }
+    else {
+      this.onPrevButtonClicked();
+    }
+  }
+
   render() {
     const { images, UIStore } = this.props;
 
@@ -100,11 +113,13 @@ class Gallery extends Component {
             <div className={styles.lightboxImageWrapper}>
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
-                  h: UIStore.windowHeight - 160,
+                  // round up to nearest 50
+                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * PIXEL_RATIO,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}
                 key={this.lightboxImageIndex}
+                onClick={this.onLightboxImageClicked}
               />
             </div>
             <div className={styles.captionWrapper}>
@@ -121,13 +136,12 @@ class Gallery extends Component {
         <div className={styles.grid}>
           {images.map((image, i) => (
             <figure key={i} className={styles.thumbnailWrapper}>
-              <img
-                src={buildCloudinaryImageUrl(image.path, {
-                  w: 200,
-                  h: 200,
+              <CloudinaryImage
+                imagePath={image.path}
+                aspectRatio={1}
+                options={{
                   c: 'fill',
-                })}
-                className={styles.thumbnail}
+                }}
                 title={image.title}
                 onClick={() => this.openLightbox(i)}
               />

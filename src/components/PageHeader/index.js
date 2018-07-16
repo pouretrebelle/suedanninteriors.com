@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
+import CloudinaryImage from '../common/CloudinaryImage';
 
 import styles from './PageHeader.module.sass';
 
@@ -11,12 +11,12 @@ const PageHeader = ({ title, subtitle, headerImage }) => (
 
     {headerImage && (
       <figure className={styles.headerImageWrapper}>
-        <img
-          src={buildCloudinaryImageUrl(headerImage, {
-            w: 726,
-            h: 242,
+        <CloudinaryImage
+          imagePath={headerImage}
+          aspectRatio={1/3}
+          options={{
             c: 'fill',
-          })}
+          }}
         />
       </figure>
     )}

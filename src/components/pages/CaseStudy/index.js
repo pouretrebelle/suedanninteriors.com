@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
+import CloudinaryImage from '../../common/CloudinaryImage';
 
 import styles from './CaseStudy.module.sass';
 
@@ -22,11 +22,12 @@ class CaseStudy extends Component {
           {studies.map((study, i) => (
             <li key={i} className={styles.studyItem}>
               <Link to={study.link} className={styles.studyLink}>
-                <img src={buildCloudinaryImageUrl(study.cover, {
-                  w: 400,
-                  h: 140, // 35%
-                  c: 'fill',
-                })}
+                <CloudinaryImage
+                  imagePath={study.cover}
+                  aspectRatio={1/3}
+                  options={{
+                    c: 'fill',
+                  }}
                 />
                 <h3 className={styles.studyTitle}>
                   {study.title}

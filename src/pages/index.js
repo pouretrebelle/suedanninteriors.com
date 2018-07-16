@@ -13,7 +13,7 @@ const IndexPage = ({ data, pathContext }) => {
   return (
     <div>
       <Homepage
-        slideshowImages={gallery.images.map(image => ({
+        gridImages={gallery.images.map(image => ({
           title: image.title,
           path: `kitchens/${image.path}`,
         }))}

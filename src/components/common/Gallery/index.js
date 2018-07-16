@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observable } from 'mobx';
 import { observer, inject } from 'mobx-react';
+import classNames from 'classnames';
 import CloudinaryImage from '../CloudinaryImage';
 import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
@@ -81,7 +82,12 @@ class Gallery extends Component {
   }
 
   render() {
-    const { images, UIStore } = this.props;
+    const { images, UIStore, gridClassName, children } = this.props;
+
+    const gridClasses = classNames({
+      [styles.grid]: true,
+      [gridClassName]: !!gridClassName,
+    })
 
     return (
       <div>
@@ -133,7 +139,7 @@ class Gallery extends Component {
           </div>
         }
 
-        <div className={styles.grid}>
+        <div className={gridClasses}>
           {images.map((image, i) => (
             <figure key={i} className={styles.thumbnailWrapper}>
               <CloudinaryImage
@@ -147,6 +153,8 @@ class Gallery extends Component {
               />
             </figure>
           ))}
+
+          {children}
         </div>
       </div>
     );
@@ -160,6 +168,8 @@ Gallery.propTypes = {
       path: PropTypes.string,
     })
   ),
+  gridClassName: PropTypes.string,
+  children: PropTypes.node,
   UIStore: PropTypes.object,
 };
 

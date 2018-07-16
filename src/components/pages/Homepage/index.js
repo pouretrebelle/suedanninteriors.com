@@ -18,7 +18,7 @@ class Homepage extends Component {
     return (
       <div>
         <Gallery
-          images={gridImages.slice(0, UIStore.windowWidth > 1000 ? 5 : 6)}
+          images={gridImages.slice(0, UIStore.windowWidth > 1200 ? 5 : 6)}
           gridClassName={styles.grid}
         >
           <div className={styles.contentWrapper}>

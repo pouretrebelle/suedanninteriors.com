@@ -129,9 +129,9 @@ class Gallery extends Component {
               />
             </div>
             <div className={styles.captionWrapper}>
-              <p className={styles.caption}>
+              <div className={styles.caption}>
                 {images[this.lightboxImageIndex].title}
-              </p>
+              </div>
               <p className={styles.indicator}>
               {(this.lightboxImageIndex + 1)} / {images.length}
               </p>

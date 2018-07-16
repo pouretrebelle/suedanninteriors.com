@@ -6,6 +6,8 @@ import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
 
+const PIXEL_RATIO = window.devicePixelRatio || 1;
+
 @inject('UIStore')
 @observer
 class Gallery extends Component {
@@ -123,8 +125,8 @@ class Gallery extends Component {
             <figure key={i} className={styles.thumbnailWrapper}>
               <img
                 src={buildCloudinaryImageUrl(image.path, {
-                  w: 200,
-                  h: 200,
+                  w: (UIStore.windowWidth > 1000 ? 250 : 200) * PIXEL_RATIO,
+                  h: (UIStore.windowWidth > 1000 ? 250 : 200) * PIXEL_RATIO,
                   c: 'fill',
                 })}
                 className={styles.thumbnail}

@@ -2,12 +2,15 @@ import React from 'react';
 import { GOOGLE_MAPS_API_KEY } from '../../../constants/googleMaps';
 
 import PageWrapper from '../../PageWrapper';
+import PageTitle from '../../PageTitle';
 import GoogleMapEmbed from './GoogleMapEmbed';
 
 import styles from './Contact.module.sass';
 
 const ContactPage = () => (
-  <PageWrapper title={'Contact'}>
+  <PageWrapper>
+    <PageTitle title="Contact" />
+
     <GoogleMapEmbed
       googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}`}
       loadingElement={<div />}

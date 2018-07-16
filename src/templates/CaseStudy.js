@@ -1,6 +1,8 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
+import PageTitle from '../components/PageTitle';
+import PageContent from '../components/PageContent';
 import Gallery from '../components/common/Gallery';
 
 const CaseStudyTemplate = ({ data, pathContext }) => {
@@ -9,13 +11,16 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
 
   return (
     <PageWrapper
-      title={`Case Study: ${caseStudy.frontmatter.title}`}
       headerImage={
         caseStudy.frontmatter.cover &&
         `${pageSlug}/${caseStudy.frontmatter.cover}`
       }
     >
-      <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
+      <PageTitle title={`Case Study: ${caseStudy.frontmatter.title}`} />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
+      </PageContent>
 
       <Gallery
         images={gallery.images.map(image => ({

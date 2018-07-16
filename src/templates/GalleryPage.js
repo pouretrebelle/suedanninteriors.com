@@ -1,6 +1,8 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
+import PageTitle from '../components/PageTitle';
+import PageContent from '../components/PageContent';
 import Gallery from '../components/common/Gallery';
 
 const GalleryPageTemplate = ({ data, pathContext }) => {
@@ -15,7 +17,11 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
         `${pageSlug}/${pageData.frontmatter.cover}`
       }
     >
-      <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      <PageTitle title={pageData.frontmatter.title} />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      </PageContent>
 
       <Gallery
         images={gallery.images.map(image => ({

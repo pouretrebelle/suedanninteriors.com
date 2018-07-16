@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
+import PageTitle from '../components/PageTitle';
 import CaseStudy from '../components/pages/CaseStudy';
 
 const DomesticPage = ({ data, pathContext }) => {
@@ -9,12 +10,13 @@ const DomesticPage = ({ data, pathContext }) => {
 
   return (
     <PageWrapper
-      title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
         require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
       }
     >
+      <PageTitle title={pageData.frontmatter.title} />
+
       <CaseStudy
         studies={
           caseStudies.edges.map((caseStudy, i) => ({

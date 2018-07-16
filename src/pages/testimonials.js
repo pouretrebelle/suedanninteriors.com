@@ -2,15 +2,16 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import PageWrapper from '../components/PageWrapper';
+import PageTitle from '../components/PageTitle';
 
 const DomesticPage = ({ data, pathContext }) => {
   const { allMarkdownRemark: testimonials } = data;
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={'Testimonials'}
-    >
+    <PageWrapper>
+      <PageTitle title="Testimonials" />
+
       {testimonials.edges.map((testimonial, i) => (
         <article key={i}>
           <h3>{testimonial.node.frontmatter.name}</h3>

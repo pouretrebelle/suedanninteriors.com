@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
 import PageFooter from '../PageFooter';
+import PageTitle from '../PageTitle';
 import Navigation from '../Navigation';
 
 import styles from './PageWrapper.module.sass';
@@ -34,7 +35,7 @@ class PageWrapper extends Component {
           </aside>
 
           <div className={styles.mainWrapper}>
-            {headerImage &&
+            {headerImage && (
               <img
                 src={buildCloudinaryImageUrl(headerImage, {
                   w: 726,
@@ -42,9 +43,9 @@ class PageWrapper extends Component {
                   c: 'fill',
                 })}
               />
-            }
+            )}
             <div className={styles.contentWrapper}>
-              <h1>{title}</h1>
+              <PageTitle title={title} />
               {children}
             </div>
           </div>

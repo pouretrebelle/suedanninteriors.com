@@ -1,11 +1,14 @@
 import React from 'react';
 
 import PageWrapper from '../../PageWrapper';
+import PageTitle from '../../PageTitle';
 
 import styles from './Press.module.sass';
 
 const PressPage = () => (
-  <PageWrapper title={'Press'}>
+  <PageWrapper>
+    <PageTitle title="Press" />
+
     <ul className={styles.pressList}>
       <li className={styles.pressItem}>
         <h3 className={styles.pressItemTitle}>

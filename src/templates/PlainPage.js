@@ -1,6 +1,8 @@
 import React from 'react';
 
 import PageWrapper from '../components/PageWrapper';
+import PageTitle from '../components/PageTitle';
+import PageContent from '../components/PageContent';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;
@@ -8,13 +10,16 @@ const PlainPageTemplate = ({ data, pathContext }) => {
 
   return (
     <PageWrapper
-      title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
         `${pageSlug}/${pageData.frontmatter.cover}`
       }
     >
-      <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      <PageTitle title={pageData.frontmatter.title} />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      </PageContent>
     </PageWrapper>
   );
 };

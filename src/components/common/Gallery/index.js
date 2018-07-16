@@ -8,18 +8,21 @@ import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
 
-const PIXEL_RATIO = window.devicePixelRatio || 1;
-
 @inject('UIStore')
 @observer
 class Gallery extends Component {
 
   lightboxElement = undefined;
+  pixelRatio = 1;
   @observable lightboxOpen = false;
   @observable lightboxImageIndex = 0;
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    this.pixelRatio = window.devicePixelRatio || 1;
   }
 
   componentWillUnmount() {
@@ -120,7 +123,7 @@ class Gallery extends Component {
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
                   // round up to nearest 50
-                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * PIXEL_RATIO,
+                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * this.pixelRatio,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}

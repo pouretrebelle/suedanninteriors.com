@@ -11,7 +11,7 @@ import styles from './CloudinaryImage.module.sass';
 @observer
 class CloudinaryImage extends Component {
   imageElement = undefined;
-  pixelRatio = window.devicePixelRatio || 1;
+  pixelRatio = 1;
   @observable imageWidth = 0;
   @observable hasLoaded = false;
 
@@ -20,6 +20,8 @@ class CloudinaryImage extends Component {
   }
 
   componentDidMount() {
+    this.pixelRatio = window.devicePixelRatio || 1;
+
     // recalculate image size when window is resized
     // but debounce by a second so it only happens with final size
     this.resizeReaction = reaction(

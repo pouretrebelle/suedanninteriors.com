@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
+import PageHeader from '../components/PageHeader';
+import PageContent from '../components/PageContent';
 import Gallery from '../components/common/Gallery';
 
 const CaseStudyTemplate = ({ data, pathContext }) => {
@@ -8,14 +9,19 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={`Case Study: ${caseStudy.frontmatter.title}`}
-      headerImage={
-        caseStudy.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${caseStudy.frontmatter.cover}`)
-      }
-    >
-      <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
+    <div>
+      <PageHeader
+        subtitle="Case Study"
+        title={caseStudy.frontmatter.title}
+        headerImage={
+          caseStudy.frontmatter.cover &&
+          `${pageSlug}/${caseStudy.frontmatter.cover}`
+        }
+      />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
+      </PageContent>
 
       <Gallery
         images={gallery.images.map(image => ({
@@ -23,7 +29,7 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
           path: `${pageSlug}/${image.path}`,
         }))}
       />
-    </PageWrapper>
+    </div>
   );
 };
 
@@ -35,6 +41,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover
       }
     }
     galleriesJson(slug: { eq: $slug }) {

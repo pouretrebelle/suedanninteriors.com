@@ -1,6 +1,7 @@
 @import 'vendor/normalize'
 @import 'variables/colors'
 @import 'variables/typography'
+@import 'mixins/responsive'
 
 @import url('https://use.typekit.net/axw1iqn.css')
 @import url('https://fonts.googleapis.com/css?family=Roboto:300')
@@ -45,6 +46,8 @@ h1
   color: $color-accent-pink
   margin: 0 0 1rem
   font-size: 2rem
+  +bp('tablet')
+    font-size: 2.5rem
 
 h2
   font-family: $font-family-titles

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 
-import PageHeader from '../PageHeader';
 import PageFooter from '../PageFooter';
 import Navigation from '../Navigation';
 
@@ -14,23 +12,17 @@ class PageWrapper extends Component {
   }
 
   render() {
-    const { children, title } = this.props;
+    const { children, title, headerImage } = this.props;
 
     return (
       <div>
-        <Helmet title={title} />
-        <PageHeader />
-
         <div className={styles.pageWrapper}>
           <aside className={styles.navigation}>
             <Navigation />
           </aside>
 
-          <div className={styles.mainWrapper}>
-            <div className={styles.contentWrapper}>
-              <h1>{title}</h1>
-              {children}
-            </div>
+          <div className={styles.contentWrapper}>
+            {children}
           </div>
         </div>
 

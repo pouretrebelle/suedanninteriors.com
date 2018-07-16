@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
+import PageContent from '../components/PageContent';
+import PageHeader from '../components/PageHeader';
 import Gallery from '../components/common/Gallery';
 
 const GalleryPageTemplate = ({ data, pathContext }) => {
@@ -8,14 +9,18 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={pageData.frontmatter.title}
-      headerImage={
-        pageData.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
-      }
-    >
-      <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+    <div>
+      <PageHeader
+        title={pageData.frontmatter.title}
+        headerImage={
+          pageData.frontmatter.cover &&
+          `${pageSlug}/${pageData.frontmatter.cover}`
+        }
+      />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      </PageContent>
 
       <Gallery
         images={gallery.images.map(image => ({
@@ -23,7 +28,7 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
           path: `${pageSlug}/${image.path}`,
         }))}
       />
-    </PageWrapper>
+    </div>
   );
 };
 
@@ -35,6 +40,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover
       }
     }
     galleriesJson(slug: { eq: $slug }) {

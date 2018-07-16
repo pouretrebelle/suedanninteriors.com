@@ -1,21 +1,26 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
+import PageContent from '../components/PageContent';
+import PageHeader from '../components/PageHeader';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={pageData.frontmatter.title}
-      headerImage={
-        pageData.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
-      }
-    >
-      <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
-    </PageWrapper>
+    <div>
+      <PageHeader
+        title={pageData.frontmatter.title}
+        headerImage={
+          pageData.frontmatter.cover &&
+          `${pageSlug}/${pageData.frontmatter.cover}`
+        }
+      />
+
+      <PageContent>
+        <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
+      </PageContent>
+    </div>
   );
 };
 
@@ -27,6 +32,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        cover
       }
     }
   }

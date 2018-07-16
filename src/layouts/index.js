@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 
 import '../styles/application.sass';
 
+import PageWrapper from '../components/PageWrapper';
+
 const Layout = props => {
   const { children, data } = props;
   return (
@@ -15,7 +17,9 @@ const Layout = props => {
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      {children()}
+      <PageWrapper>
+        {children()}
+      </PageWrapper>
     </div>
   );
 };

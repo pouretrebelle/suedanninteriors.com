@@ -2,24 +2,16 @@
 @import '../../styles/variables/colors'
 
 .pageWrapper
-  max-width: 1000px
   padding: 0
-  margin: 0 auto
-  +bp('mobile')
-    padding: 0 1rem
+  margin: 0
   +bp('tablet')
     display: flex
 
 .navigation
   +bp('tablet')
-    width: 20%
-
-.mainWrapper
-  +bp('tablet')
-    width: 80%
+    width: 25%
 
 .contentWrapper
   background: $color-accent-cream
-  padding: 1rem
-  +bp('mobile')
-    padding: 2rem
+  +bp('tablet')
+    width: 75%

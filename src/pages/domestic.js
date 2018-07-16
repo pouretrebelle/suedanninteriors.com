@@ -1,6 +1,7 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
+import PageContent from '../components/PageContent';
+import PageHeader from '../components/PageHeader';
 import CaseStudy from '../components/pages/CaseStudy';
 
 const DomesticPage = ({ data, pathContext }) => {
@@ -8,17 +9,17 @@ const DomesticPage = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={pageData.frontmatter.title}
+    <div>
+      <PageHeader title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
         require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
-      }
-    >
+      } />
+
       <CaseStudy
         studies={
           caseStudies.edges.map((caseStudy, i) => ({
-            link: `/case-study/${caseStudy.node.frontmatter.slug}`,
+            link: `/domestic/${caseStudy.node.frontmatter.slug}`,
             title: caseStudy.node.frontmatter.title,
             cover: `${caseStudy.node.frontmatter.slug}/${caseStudy.node.frontmatter.cover}`,
           }))
@@ -26,7 +27,7 @@ const DomesticPage = ({ data, pathContext }) => {
       >
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
       </CaseStudy>
-    </PageWrapper>
+    </div>
   );
 };
 

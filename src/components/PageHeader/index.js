@@ -1,19 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
 import styles from './PageHeader.module.sass';
 
-class PageHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
+const PageHeader = ({ title, subtitle, headerImage }) => (
+  <div>
+    <Helmet title={title} />
 
-  render() {
-    return (
-      <div className={styles.header}>
-        for all your interior design requirements
-      </div>
-    );
-  }
-}
+    {headerImage && (
+      <figure className={styles.headerImageWrapper}>
+        <img
+          src={buildCloudinaryImageUrl(headerImage, {
+            w: 726,
+            h: 242,
+            c: 'fill',
+          })}
+        />
+      </figure>
+    )}
+
+    {subtitle &&
+      <h2 className={styles.subtitle}>{subtitle}</h2>
+    }
+
+    <h1 className={styles.title}>{title}</h1>
+  </div>
+);
+
+PageHeader.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  headerImage: PropTypes.string,
+};
 
 export default PageHeader;

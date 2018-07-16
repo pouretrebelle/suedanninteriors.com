@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observable } from 'mobx';
 import { observer, inject } from 'mobx-react';
+import CloudinaryImage from '../CloudinaryImage';
 import { buildCloudinaryImageUrl } from '../../../utils/imageUtils';
 
 import styles from './Gallery.module.sass';
@@ -135,13 +136,12 @@ class Gallery extends Component {
         <div className={styles.grid}>
           {images.map((image, i) => (
             <figure key={i} className={styles.thumbnailWrapper}>
-              <img
-                src={buildCloudinaryImageUrl(image.path, {
-                  w: (UIStore.windowWidth > 1000 ? 250 : 200) * PIXEL_RATIO,
-                  h: (UIStore.windowWidth > 1000 ? 250 : 200) * PIXEL_RATIO,
+              <CloudinaryImage
+                imagePath={image.path}
+                aspectRatio={1}
+                options={{
                   c: 'fill',
-                })}
-                className={styles.thumbnail}
+                }}
                 title={image.title}
                 onClick={() => this.openLightbox(i)}
               />

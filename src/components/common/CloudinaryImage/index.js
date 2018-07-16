@@ -62,7 +62,15 @@ class CloudinaryImage extends Component {
   };
 
   render() {
-    const { imagePath, aspectRatio, options, className, transitionOpacity } = this.props;
+    const {
+      imagePath,
+      aspectRatio,
+      options,
+      className,
+      transitionOpacity,
+      UIStore, // eslint-disable-line
+      ...props
+    } = this.props;
 
     const imageClasses = classNames({
       [className]: !!className,
@@ -83,6 +91,7 @@ class CloudinaryImage extends Component {
         src={buildCloudinaryImageUrl(imagePath, imageOptions)}
         key={imagePath}
         className={imageClasses}
+        {...props}
       />
     );
 

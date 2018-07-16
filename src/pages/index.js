@@ -15,7 +15,7 @@ const IndexPage = ({ data, pathContext }) => {
       <Homepage
         gridImages={gallery.images.map(image => ({
           title: image.title,
-          path: `kitchens/${image.path}`,
+          path: `homepage/${image.path}`,
         }))}
       >
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
@@ -29,7 +29,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: "index" } }) {
       html
     }
-    galleriesJson(slug: { eq: "kitchens" }) {
+    galleriesJson(slug: { eq: "homepage" }) {
       images {
         title
         path

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
 import PageTitle from '../components/PageTitle';
 import PageContent from '../components/PageContent';
 import Gallery from '../components/common/Gallery';
@@ -10,13 +9,15 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      headerImage={
-        caseStudy.frontmatter.cover &&
-        `${pageSlug}/${caseStudy.frontmatter.cover}`
-      }
-    >
-      <PageTitle title={`Case Study: ${caseStudy.frontmatter.title}`} />
+    <div>
+      <PageTitle
+        subtitle="Case Study"
+        title={caseStudy.frontmatter.title}
+        headerImage={
+          caseStudy.frontmatter.cover &&
+          `${pageSlug}/${caseStudy.frontmatter.cover}`
+        }
+      />
 
       <PageContent>
         <main dangerouslySetInnerHTML={{ __html: caseStudy.html }} />
@@ -28,7 +29,7 @@ const CaseStudyTemplate = ({ data, pathContext }) => {
           path: `${pageSlug}/${image.path}`,
         }))}
       />
-    </PageWrapper>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
+import PageContent from '../components/PageContent';
 import PageTitle from '../components/PageTitle';
 import CaseStudy from '../components/pages/CaseStudy';
 
@@ -9,13 +9,12 @@ const DomesticPage = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
+    <div>
+      <PageTitle title={pageData.frontmatter.title}
       headerImage={
         pageData.frontmatter.cover &&
         require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
-      }
-    >
-      <PageTitle title={pageData.frontmatter.title} />
+      } />
 
       <CaseStudy
         studies={
@@ -28,7 +27,7 @@ const DomesticPage = ({ data, pathContext }) => {
       >
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
       </CaseStudy>
-    </PageWrapper>
+    </div>
   );
 };
 

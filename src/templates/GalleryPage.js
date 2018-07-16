@@ -1,8 +1,7 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
-import PageTitle from '../components/PageTitle';
 import PageContent from '../components/PageContent';
+import PageTitle from '../components/PageTitle';
 import Gallery from '../components/common/Gallery';
 
 const GalleryPageTemplate = ({ data, pathContext }) => {
@@ -10,14 +9,14 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      title={pageData.frontmatter.title}
-      headerImage={
-        pageData.frontmatter.cover &&
-        `${pageSlug}/${pageData.frontmatter.cover}`
-      }
-    >
-      <PageTitle title={pageData.frontmatter.title} />
+    <div>
+      <PageTitle
+        title={pageData.frontmatter.title}
+        headerImage={
+          pageData.frontmatter.cover &&
+          `${pageSlug}/${pageData.frontmatter.cover}`
+        }
+      />
 
       <PageContent>
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
@@ -29,7 +28,7 @@ const GalleryPageTemplate = ({ data, pathContext }) => {
           path: `${pageSlug}/${image.path}`,
         }))}
       />
-    </PageWrapper>
+    </div>
   );
 };
 

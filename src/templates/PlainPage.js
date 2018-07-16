@@ -1,26 +1,26 @@
 import React from 'react';
 
-import PageWrapper from '../components/PageWrapper';
-import PageTitle from '../components/PageTitle';
 import PageContent from '../components/PageContent';
+import PageTitle from '../components/PageTitle';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;
   const { slug: pageSlug } = pathContext;
 
   return (
-    <PageWrapper
-      headerImage={
-        pageData.frontmatter.cover &&
-        `${pageSlug}/${pageData.frontmatter.cover}`
-      }
-    >
-      <PageTitle title={pageData.frontmatter.title} />
+    <div>
+      <PageTitle
+        title={pageData.frontmatter.title}
+        headerImage={
+          pageData.frontmatter.cover &&
+          `${pageSlug}/${pageData.frontmatter.cover}`
+        }
+      />
 
       <PageContent>
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
       </PageContent>
-    </PageWrapper>
+    </div>
   );
 };
 

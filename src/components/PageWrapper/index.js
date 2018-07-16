@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { buildCloudinaryImageUrl } from '../../utils/imageUtils';
 
 import PageFooter from '../PageFooter';
 import Navigation from '../Navigation';
@@ -22,19 +21,8 @@ class PageWrapper extends Component {
             <Navigation />
           </aside>
 
-          <div className={styles.mainWrapper}>
-            {headerImage && (
-              <img
-                src={buildCloudinaryImageUrl(headerImage, {
-                  w: 726,
-                  h: 242,
-                  c: 'fill',
-                })}
-              />
-            )}
-            <div className={styles.contentWrapper}>
-              {children}
-            </div>
+          <div className={styles.contentWrapper}>
+            {children}
           </div>
         </div>
 
@@ -47,7 +35,6 @@ class PageWrapper extends Component {
 PageWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  headerImage: PropTypes.string,
 };
 
 export default PageWrapper;

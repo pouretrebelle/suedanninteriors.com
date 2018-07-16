@@ -1,2 +1,17 @@
+@import '../../styles/mixins/responsive'
+
+.subtitle
+  position: relative
+  top: 1rem
+  margin: 0 1rem
+  +bp('mobile')
+    top: 2rem
+    margin: 0 2rem
+
 .title
-  max-width: 600px
+  padding: 1rem
+  margin: 0
+  +bp('mobile')
+    padding: 1rem 2rem
+  +bp('tablet')
+    padding: 2rem

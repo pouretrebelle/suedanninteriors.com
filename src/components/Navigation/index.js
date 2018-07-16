@@ -147,9 +147,9 @@ class Navigation extends Component {
           </li>
         </ul>
 
-        <p className={styles.slogan}>
-          for all your interior<br />design requirements
-        </p>
+        <div className={styles.slogan}>
+          <p>for all your interior<br />design requirements</p>
+        </div>
 
         <div className={styles.biidWrapper}>
           <a 

@@ -69,6 +69,16 @@ class Gallery extends Component {
     }
   }
 
+  onLightboxImageClicked = (e) => {
+    const { UIStore } = this.props;
+    if (e.pageX > UIStore.windowWidth / 2) {
+      this.onNextButtonClicked();
+    }
+    else {
+      this.onPrevButtonClicked();
+    }
+  }
+
   render() {
     const { images, UIStore } = this.props;
 
@@ -108,6 +118,7 @@ class Gallery extends Component {
                 })}
                 className={styles.lightboxImage}
                 key={this.lightboxImageIndex}
+                onClick={this.onLightboxImageClicked}
               />
             </div>
             <div className={styles.captionWrapper}>

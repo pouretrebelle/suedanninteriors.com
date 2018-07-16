@@ -10,13 +10,15 @@ const PageHeader = ({ title, subtitle, headerImage }) => (
     <Helmet title={title} />
 
     {headerImage && (
-      <img
-        src={buildCloudinaryImageUrl(headerImage, {
-          w: 726,
-          h: 242,
-          c: 'fill',
-        })}
-      />
+      <figure className={styles.headerImageWrapper}>
+        <img
+          src={buildCloudinaryImageUrl(headerImage, {
+            w: 726,
+            h: 242,
+            c: 'fill',
+          })}
+        />
+      </figure>
     )}
 
     {subtitle &&

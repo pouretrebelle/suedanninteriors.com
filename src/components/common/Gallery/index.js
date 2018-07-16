@@ -102,7 +102,8 @@ class Gallery extends Component {
             <div className={styles.lightboxImageWrapper}>
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
-                  h: UIStore.windowHeight - 160,
+                  // round up to nearest 50
+                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * PIXEL_RATIO,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}

@@ -13,6 +13,14 @@ class Homepage extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.UIStore.setStretchContentHeightFalse();
+  }
+
+  componentWillUnmount() {
+    this.props.UIStore.setStretchContentHeightTrue();
+  }
+
   render() {
     const { gridImages, children, UIStore } = this.props;
 

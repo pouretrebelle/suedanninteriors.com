@@ -85,7 +85,7 @@ class Gallery extends Component {
   }
 
   render() {
-    const { images, UIStore, gridClassName, children } = this.props;
+    const { images, UIStore, gridClassName, aspectRatio, children } = this.props;
 
     const gridClasses = classNames({
       [styles.grid]: true,
@@ -148,7 +148,7 @@ class Gallery extends Component {
             <figure key={i} className={styles.thumbnailWrapper}>
               <CloudinaryImage
                 imagePath={image.path}
-                aspectRatio={1}
+                aspectRatio={aspectRatio}
                 options={{
                   c: 'fill',
                 }}
@@ -172,9 +172,14 @@ Gallery.propTypes = {
       path: PropTypes.string,
     })
   ),
+  aspectRatio: PropTypes.number,
   gridClassName: PropTypes.string,
   children: PropTypes.node,
   UIStore: PropTypes.object,
+};
+
+Gallery.defaultProps = {
+  aspectRatio: 1,
 };
 
 export default Gallery;

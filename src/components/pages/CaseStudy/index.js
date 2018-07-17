@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import classNames from 'classnames';
 import CloudinaryImage from '../../common/CloudinaryImage';
 
 import styles from './CaseStudy.module.sass';
@@ -11,9 +12,9 @@ class CaseStudy extends Component {
   }
 
   render() {
-    const { studies, children } = this.props;
+    const { studies, children, className } = this.props;
     return (
-      <div className={styles.wrapper}>
+      <div className={classNames(styles.wrapper, className)}>
         <div className={styles.content}>
           {children}
         </div>
@@ -43,6 +44,7 @@ class CaseStudy extends Component {
 
 CaseStudy.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
   studies: PropTypes.arrayOf(PropTypes.shape({
     link: PropTypes.string,
     title: PropTypes.string,

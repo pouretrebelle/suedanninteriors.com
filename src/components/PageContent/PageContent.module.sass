@@ -8,3 +8,23 @@
     width: 60%
     min-width: 600px
     padding: 0 0 calc(1rem + 1.6vw) calc(1rem + 1.6vw)
+
+.wrapperWithSidebar
+  @extend .wrapper
+  +bp('tablet')
+    display: flex
+  +bp('desktop')
+    width: 100%
+
+.sidebarContent
+  flex: 1
+
+.sidebarImage
+  margin: 1rem 0 0
+  flex: 1
+  +bp('mobile')
+    margin: 2rem 0 0
+  +bp('tablet')
+    margin: 0 0 0 2rem
+  +bp('desktop')
+    margin: 0 calc(1rem + 1.6vw)

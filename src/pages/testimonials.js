@@ -1,26 +1,17 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import PageContent from '../components/PageContent';
-import PageHeader from '../components/PageHeader';
+import Testimonials from '../components/pages/Testimonials';
 
-const DomesticPage = ({ data, pathContext }) => {
-  const { allMarkdownRemark: testimonials } = data;
+const TestimonialPage = ({ data, pathContext }) => {
+  const { allMarkdownRemark: testimonialsData } = data;
   const { slug: pageSlug } = pathContext;
 
   return (
     <div>
-      <PageHeader title="Testimonials" />
-
-      <PageContent>
-        {testimonials.edges.map((testimonial, i) => (
-          <article key={i}>
-            <h3>{testimonial.node.frontmatter.name}</h3>
-            <h4>{testimonial.node.frontmatter.address}</h4>
-            <div dangerouslySetInnerHTML={{ __html: testimonial.node.html }} />
-          </article>
-        ))}
-      </PageContent>
+      <Testimonials
+        testimonials={testimonialsData.edges.map(testimonial => Object.assign({}, testimonial.node.frontmatter, { html: testimonial.node.html }))}
+      />
     </div>
   );
 };
@@ -36,6 +27,9 @@ export const pageQuery = graphql`
           frontmatter {
             name
             address
+            caseStudyTitle
+            caseStudyLink
+            caseStudyCover
           }
         }
       }
@@ -43,4 +37,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default DomesticPage;
+export default TestimonialPage;

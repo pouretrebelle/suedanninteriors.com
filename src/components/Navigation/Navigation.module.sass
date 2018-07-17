@@ -68,9 +68,12 @@
   +bp('desktop')
     font-size: calc(0.5rem + 0.8vw)
 
+.navLinkActivePlain,
+.navLinkActive
+  font-weight: $font-weight-heavy
+
 .navLinkActive
   position: relative
-  font-weight: $font-weight-heavy
   +bp('tablet')
     &:after
       content: ''
@@ -83,6 +86,9 @@
       border-style: solid
       border-width: 0.5rem 0.5rem 0.5rem 0
       border-color: transparent $color-accent-cream
+  +bp('desktop')
+    &:after
+      top: calc(0.25rem + 0.4vw)
 
 .slogan
   margin: 0

@@ -1,23 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PageContent from '../../PageContent';
 import PageHeader from '../../PageHeader';
+import Gallery from '../../common/Gallery';
 
 import styles from './Press.module.sass';
 
-const PressPage = () => (
+const PressPage = ({ images }) => (
   <div>
     <PageHeader title="Press" />
+
+    <Gallery
+      images={images}
+      gridClassName={styles.gallery}
+      aspectRatio={1.414}
+    />
 
     <PageContent>
 
       <ul className={styles.pressList}>
         <li className={styles.pressItem}>
-          <h3 className={styles.pressItemTitle}>
+          <h2 className={styles.pressItemTitle}>
             <a href={'/assets/selfbuilddesignarticle.pdf'} target={'_blank'}>
               Enhancing The Flow
             </a>
-          </h3>
+          </h2>
           <p className={styles.pressItemOrigin}>
             SelfBuild &amp; Design Magazine
           </p>
@@ -25,7 +33,7 @@ const PressPage = () => (
         </li>
 
         <li className={styles.pressItem}>
-          <h3 className={styles.pressItemTitle}>
+          <h2 className={styles.pressItemTitle}>
             <a
               href={
                 'http://www.telegraph.co.uk/finance/property/advice/10520933/Best-20-interior-designers-in-Britain.html'
@@ -34,11 +42,13 @@ const PressPage = () => (
             >
               Best 20 Interior Designers in Britain
             </a>
-          </h3>
+          </h2>
           <p className={styles.pressItemOrigin}>The Telegraph</p>
           <time className={styles.pressItemTime}>December 2013</time>
         </li>
       </ul>
+
+      <hr />
 
       <ul className={styles.linkList}>
         <li className={styles.linkItem}>
@@ -58,5 +68,14 @@ const PressPage = () => (
     </PageContent>
   </div>
 );
+
+PressPage.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      path: PropTypes.string,
+    })
+  ),
+}
 
 export default PressPage;

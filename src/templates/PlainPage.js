@@ -1,11 +1,14 @@
 import React from 'react';
 
 import PageContent from '../components/PageContent';
+import PageContentWithSidebar from '../components/PageContent/PageContentWithSidebar';
 import PageHeader from '../components/PageHeader';
 
 const PlainPageTemplate = ({ data, pathContext }) => {
   const { markdownRemark: pageData } = data;
   const { slug: pageSlug } = pathContext;
+
+  const ContentComponent = pageData.frontmatter.sidebar ? PageContentWithSidebar : PageContent;
 
   return (
     <div>
@@ -17,9 +20,14 @@ const PlainPageTemplate = ({ data, pathContext }) => {
         }
       />
 
-      <PageContent>
+      <ContentComponent
+        sidebarImage={
+          pageData.frontmatter.sidebar &&
+          `${pageSlug}/${pageData.frontmatter.sidebar}`
+        }
+      >
         <main dangerouslySetInnerHTML={{ __html: pageData.html }} />
-      </PageContent>
+      </ContentComponent>
     </div>
   );
 };
@@ -33,6 +41,7 @@ export const pageQuery = graphql`
         slug
         title
         cover
+        sidebar
       }
     }
   }

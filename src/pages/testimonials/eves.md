@@ -1,11 +1,15 @@
 ---
 type: 'testimonial'
-name: Janet Singleton and Richard Moffatt
-address: Rode, Somerset
+name: Mr & Mrs Eve
+address: Sydney Place, Bath
+
+caseStudyTitle: 'Case Study: Georgian Apartment in Sydney Place, Bath'
+caseStudyLink: '/domestic/2008-georgian-apartment'
+caseStudyCover: '2008-georgian-apartment/dom4j.jpg'
 ---
 
-Dear Sue, just a little note to say a big thank you for all the hard work you put in re-vamping our house. We are really delighted with the final result.
+We are absolutely thrilled with the renovation project Sue Dann has carried out for us. The apartment is totally transformed by Sue’s stylish creativity, sourcing of wonderful interiors and excellent project management.
 
-All the colours, soft furnishings and accessories work beautifully. The finished project has exceeded our expectations and our son’s girlfriend commented that our home should be in one of the Home Design Magazines!
+Sue has been very professional with all the people she has come into contact with, such as clients, suppliers, construction workers, and indeed other apartment owners. Sue has kept us very well informed with progress of the works, costs and made it a trouble-free experience for us.
 
-[Case Study: Victorian Country House in Rode, Somerset](/case-study/2012-victorian-country-house)
+We could not have achieved this result without Sue Dann and we are delighted with the stunning home we can now enjoy.

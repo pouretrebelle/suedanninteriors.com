@@ -146,7 +146,7 @@ class Navigation extends Component {
             <Link
               to="/contact"
               className={styles.navLink}
-              activeClassName={styles.navLinkActive}
+              activeClassName={styles.navLinkActivePlain}
               exact={false}
             >
               Contact

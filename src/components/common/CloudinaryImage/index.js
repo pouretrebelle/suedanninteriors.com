@@ -35,7 +35,7 @@ class CloudinaryImage extends Component {
 
   componentWillUnmount() {
     // dispose of reaction
-    this.resizeReaction();
+    if (this.resizeReaction) this.resizeReaction();
   }
 
   onImageMount = (element) => {

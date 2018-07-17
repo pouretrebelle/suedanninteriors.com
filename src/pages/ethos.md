@@ -2,7 +2,7 @@
 type: 'plain-page'
 slug: 'ethos'
 title: 'Company Ethos'
-sidebar: 'cover.jpg'
+sidebar: 'plans.jpg'
 ---
 
 Our wide ranging experience across all areas of interior design allows us to provide you with a complete service, from the supply of one pair of curtains to completely re-designing your hotel, house or kitchen.

@@ -13,8 +13,10 @@ const Layout = props => {
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: 'Sue Dann Interiors create classic and contemporary interiors for your home or commercial premises.' },
+          { name: 'Author', content: 'Sue Dann' },
+          { name: 'keywords', content: 'Sue Dann, Interior Design, Home Counties, Bespoke Kitchens, Commercial Interiors, Contemporary Design' },
+          { name: 'viewport', content: 'width=device-width' },
         ]}
       />
       <PageWrapper>

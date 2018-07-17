@@ -19,6 +19,11 @@ class Navigation extends Component {
     super(props);
   }
 
+  shouldComponentUpdate() {
+    // for active links
+    return true;
+  }
+
   toggleNavList = (category) => {
     this.mobileNavOpen[category] = !this.mobileNavOpen[category];
   }

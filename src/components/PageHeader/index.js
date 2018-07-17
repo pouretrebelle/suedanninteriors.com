@@ -7,7 +7,7 @@ import styles from './PageHeader.module.sass';
 
 const PageHeader = ({ title, subtitle, headerImage }) => (
   <div>
-    <Helmet title={title} />
+    <Helmet title={`${title} | Sue Dann Interiors`} />
 
     {headerImage && (
       <CloudinaryImage

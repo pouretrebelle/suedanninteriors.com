@@ -123,7 +123,8 @@ class Gallery extends Component {
               <img
                 src={buildCloudinaryImageUrl(images[this.lightboxImageIndex].path, {
                   // round up to nearest 50
-                  h: Math.ceil((UIStore.windowHeight - 160) / 50) * 50  * this.pixelRatio,
+                  h: Math.ceil((UIStore.windowHeight) / 50) * 50  * this.pixelRatio,
+                  w: Math.ceil((UIStore.windowWidth) / 50) * 50  * this.pixelRatio,
                   c: 'limit',
                 })}
                 className={styles.lightboxImage}
@@ -135,7 +136,7 @@ class Gallery extends Component {
               <div className={styles.caption}>
                 {images[this.lightboxImageIndex].title}
               </div>
-              <p className={styles.indicator}>
+            <p className={styles.indicator}>
               {(this.lightboxImageIndex + 1)} / {images.length}
               </p>
             </div>

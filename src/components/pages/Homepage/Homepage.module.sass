@@ -2,8 +2,11 @@
 
 .grid
   grid-template-columns: 1fr 1fr
-  grid-gap: 0
   +bp('mobile')
+    grid-template-columns: 1fr 1fr 1fr
+  +bp('tablet')
+    grid-gap: 0
+  +bp('desktop')
     grid-template-columns: 1fr 1fr 1fr
 
 .contentWrapper

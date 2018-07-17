@@ -1,0 +1,24 @@
+@import '../../../styles/variables/colors'
+@import '../../../styles/variables/typography'
+@import '../../../styles/mixins/responsive'
+
+.article
+  +bp(0, 'tablet')
+    display: flex
+    flex-direction: column-reverse
+  +bp('desktop')
+    margin-bottom: 1rem
+
+.quote
+  margin: 0 0 1rem
+  padding-left: 1rem
+  border-left: 1px solid $color-accent-blue
+  font-size: 0.875rem
+
+.quoteName
+  font-weight: $font-weight-heavy
+  font-style: normal
+  font-family: $font-family-titles
+
+.quoteAddress
+  margin: 0

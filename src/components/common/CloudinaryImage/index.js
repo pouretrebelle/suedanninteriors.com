@@ -29,6 +29,7 @@ class CloudinaryImage extends Component {
       this.sizeImage,
       {
         delay: 1000,
+        fireImmediately: true,
       }
     );
   }
@@ -38,7 +39,7 @@ class CloudinaryImage extends Component {
     if (this.resizeReaction) this.resizeReaction();
   }
 
-  onImageMount = (element) => {
+  onImageMount = element => {
     if (!element) return;
 
     this.imageElement = element;
@@ -53,8 +54,7 @@ class CloudinaryImage extends Component {
   sizeImage = () => {
     if (!this.imageElement) return;
 
-    const newWidth =
-      this.imageElement.clientWidth * this.pixelRatio;
+    const newWidth = this.imageElement.clientWidth * this.pixelRatio;
 
     // don't resize if it's smaller than the current
     if (newWidth < this.imageWidth) return;
@@ -101,12 +101,14 @@ class CloudinaryImage extends Component {
       <figure
         className={styles.aspectRatioWrapper}
         style={{
-          paddingBottom: `${Math.round(aspectRatio * 10000)/100}%`,
+          paddingBottom: `${Math.round(aspectRatio * 10000) / 100}%`,
         }}
       >
         {image}
       </figure>
-    ) : image;
+    ) : (
+      image
+    );
   }
 }
 

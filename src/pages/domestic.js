@@ -10,11 +10,7 @@ const DomesticPage = ({ data, pathContext }) => {
 
   return (
     <div>
-      <PageHeader title={pageData.frontmatter.title}
-      headerImage={
-        pageData.frontmatter.cover &&
-        require(`../assets/images/${pageSlug}/${pageData.frontmatter.cover}`)
-      } />
+      <PageHeader title={pageData.frontmatter.title}/>
 
       <CaseStudy
         studies={

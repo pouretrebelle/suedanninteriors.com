@@ -1,4 +1,5 @@
 @import '../../../styles/mixins/responsive'
+@import '../../../styles/variables/typography'
 
 .pressList,
 .linkList
@@ -18,3 +19,18 @@
   +bp('desktop')
     margin: 0 calc(1rem + 1.6vw) calc(1rem + 1.6vw)
     grid-template-columns: 1fr 1fr 1fr
+
+.pressItem
+  margin: 0 0 1rem
+  +bp('tablet')
+    margin: 0 0 2rem
+
+.pressItemTitle
+  margin: 0 0 0.5rem
+
+.pressItemOrigin
+  margin: 0 0 0.25rem
+
+.pressItemTime
+  font-weight: $font-weight-heavy
+  font-size: 0.75rem

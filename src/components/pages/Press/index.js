@@ -21,11 +21,11 @@ const PressPage = ({ images }) => (
 
       <ul className={styles.pressList}>
         <li className={styles.pressItem}>
-          <h3 className={styles.pressItemTitle}>
+          <h2 className={styles.pressItemTitle}>
             <a href={'/assets/selfbuilddesignarticle.pdf'} target={'_blank'}>
               Enhancing The Flow
             </a>
-          </h3>
+          </h2>
           <p className={styles.pressItemOrigin}>
             SelfBuild &amp; Design Magazine
           </p>
@@ -33,7 +33,7 @@ const PressPage = ({ images }) => (
         </li>
 
         <li className={styles.pressItem}>
-          <h3 className={styles.pressItemTitle}>
+          <h2 className={styles.pressItemTitle}>
             <a
               href={
                 'http://www.telegraph.co.uk/finance/property/advice/10520933/Best-20-interior-designers-in-Britain.html'
@@ -42,11 +42,13 @@ const PressPage = ({ images }) => (
             >
               Best 20 Interior Designers in Britain
             </a>
-          </h3>
+          </h2>
           <p className={styles.pressItemOrigin}>The Telegraph</p>
           <time className={styles.pressItemTime}>December 2013</time>
         </li>
       </ul>
+
+      <hr />
 
       <ul className={styles.linkList}>
         <li className={styles.linkItem}>

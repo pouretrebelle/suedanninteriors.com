@@ -1,13 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PageContent from '../../PageContent';
 import PageHeader from '../../PageHeader';
+import Gallery from '../../common/Gallery';
 
 import styles from './Press.module.sass';
 
-const PressPage = () => (
+const PressPage = ({ images }) => (
   <div>
     <PageHeader title="Press" />
+
+    <Gallery
+      images={images}
+      gridClassName={styles.gallery}
+      aspectRatio={1.414}
+    />
 
     <PageContent>
 
@@ -58,5 +66,14 @@ const PressPage = () => (
     </PageContent>
   </div>
 );
+
+PressPage.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      path: PropTypes.string,
+    })
+  ),
+}
 
 export default PressPage;

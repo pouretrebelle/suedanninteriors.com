@@ -15,7 +15,7 @@ class PageFooter extends Component {
           Wiltshire, SN9 5PZ. United Kingdom
         </p>
         <p>
-          Tel: 44(0)167 256 2275 | Fax: 44(0)872 011 4572 | Mob: 07836 358 635
+          Tel: +44 (0) 167 256 2275 | Fax: +44 (0) 872 011 4572 | Mob: +44 (0) 7836 358 635
         </p>
         <p>
           E:{' '}

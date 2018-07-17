@@ -17,12 +17,44 @@ const ContactPage = () => (
         us by email or telephone to arrange a meeting
       </p>
       <p>
-        Tel Pewsey: 44(0)1672 562275<br />
-        Tel Bath: 44(0)1225 341501<br />
-        Fax: 44(0)872 011 4572<br />
-        Mob: 44(0)7836 358 635<br />
-        Email: sue@suedanninteriors.com<br />
-        Web: www.suedanninteriors.com<br />
+        <dl className={styles.contactList}>
+          <dt className={styles.contactTerm}>
+            Tel Pewsey
+          </dt>
+          <dd className={styles.contactDescription}>
+            +44 (0) 1672 562275
+          </dd>
+          <dt className={styles.contactTerm}>
+            Tel Bath
+          </dt>
+          <dd className={styles.contactDescription}>
+            +44 (0) 1225 341501
+          </dd>
+          <dt className={styles.contactTerm}>
+            Fax
+          </dt>
+          <dd className={styles.contactDescription}>
+            +44 (0) 872 011 4572
+          </dd>
+          <dt className={styles.contactTerm}>
+            Mob
+          </dt>
+          <dd className={styles.contactDescription}>
+            +44 (0) 7836 358 635
+          </dd>
+          <dt className={styles.contactTerm}>
+            Email
+          </dt>
+          <dd className={styles.contactDescription}>
+            sue@suedanninteriors.com
+          </dd>
+          <dt className={styles.contactTerm}>
+            Web
+          </dt>
+          <dd className={styles.contactDescription}>
+            www.suedanninteriors.com
+          </dd>
+        </dl>
       </p>
       <p>
         Sue Dann Interiors<br />
@@ -38,7 +70,7 @@ const ContactPage = () => (
     <GoogleMapEmbed
       googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}`}
       loadingElement={<div />}
-      containerElement={<div style={{ height: 350 }} />}
+      containerElement={<div style={{ height: 450 }} />}
       mapElement={<div style={{ height: '100%' }} />}
     />
   </div>

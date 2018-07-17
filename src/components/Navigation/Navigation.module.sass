@@ -68,9 +68,12 @@
   +bp('desktop')
     font-size: calc(0.5rem + 0.8vw)
 
+.navLinkActivePlain,
+.navLinkActive
+  font-weight: $font-weight-heavy
+
 .navLinkActive
   position: relative
-  font-weight: $font-weight-heavy
   +bp('tablet')
     &:after
       content: ''

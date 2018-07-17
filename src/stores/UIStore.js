@@ -46,6 +46,19 @@ class UIStore {
   }, 100);
   onWindowScrolled = () => this.updateScrollTop();
   onMouseMoved = e => this.updateMousePosition(e);
+
+
+  @observable stretchContentHeight = true;
+
+  @action
+  setStretchContentHeightTrue = () => {
+    this.stretchContentHeight = true;
+  }
+
+  @action
+  setStretchContentHeightFalse = () => {
+    this.stretchContentHeight = false;
+  }
 }
 
 export default new UIStore();

@@ -2,7 +2,7 @@
 type: 'gallery-page'
 slug: 'kitchens'
 title: 'Bespoke Kitchens'
-cover: 'kit13.jpg'
+cover: 'kitchen12.jpg'
 ---
 
 Do you dream of a Bespoke Kitchen but don’t know where to start?

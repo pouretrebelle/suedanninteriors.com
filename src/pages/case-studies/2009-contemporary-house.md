@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2009-contemporary-house'
 date: '2009'
 title: 'Contemporary House in Bath'
-cover: 'dom3f.jpg'
+cover: 'bath08.jpg'
 ---
 
 The clients in this house had a wonderful collection of modern art and some contemporary furniture including a large L-shaped sofa but the room was cold and needed an injection of colour and texture.

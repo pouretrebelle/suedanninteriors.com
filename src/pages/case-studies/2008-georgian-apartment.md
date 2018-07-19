@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2008-georgian-apartment'
 date: '2008'
 title: 'Georgian Apartment in Sydney Place, Bath'
-cover: 'dom4j.jpg'
+cover: 'sydney20.jpg'
 ---
 
 This Grade I Listed Georgian apartment badly needed modernising and the décor was drab and dated.

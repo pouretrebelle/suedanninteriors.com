@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2012-victorian-country-house'
 date: '2012'
 title: 'Victorian Country House in Rode, Somerset'
-cover: 'dom1r.jpg'
+cover: 'rode12.jpg'
 ---
 
 This handsome Victorian Country House had many beautiful original features and the owners had some fine antique furniture and artwork but the rooms were dull and cluttered.

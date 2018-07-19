@@ -1,67 +1,47 @@
 {
   "slug": "2012-victorian-country-house",
   "images": [{
-      "path": "dom1d.jpg",
-      "title": "Entrance hall"
-    },
-    {
-      "path": "dom1k.jpg",
-      "title": "Entrance hall"
-    },
-    {
-      "path": "dom1c.jpg",
+      "path": "rode03.jpg",
       "title": "Dining room"
     },
     {
-      "path": "dom1n.jpg",
+      "path": "rode08.jpg",
       "title": "Sitting room corner view"
     },
     {
-      "path": "dom1o.jpg",
+      "path": "rode09.jpg",
       "title": "Sitting room lamps"
     },
     {
-      "path": "dom1p.jpg",
+      "path": "rode08.jpg",
       "title": "Sitting room sofas"
     },
     {
-      "path": "dom1q.jpg",
+      "path": "rode11.jpg",
       "title": "Sitting room with new sofas and log burning stove"
     },
     {
-      "path": "dom1l.jpg",
+      "path": "rode13.jpg",
       "title": "Sitting room detail"
     },
     {
-      "path": "dom1e.jpg",
-      "title": "Guest bedroom 1 feature wall"
-    },
-    {
-      "path": "dom1f.jpg",
-      "title": "Guest bedroom 1 fitted wardrobe and window detail"
-    },
-    {
-      "path": "dom1g.jpg",
+      "path": "rode04.jpg",
       "title": "Guest bedroom 1"
     },
     {
-      "path": "dom1b.jpg",
+      "path": "rode02.jpg",
       "title": "Details of headboard and cushions in guest bedroom 1"
     },
     {
-      "path": "dom1h.jpg",
-      "title": "Guest bedroom 2 window treatment"
-    },
-    {
-      "path": "dom1i.jpg",
+      "path": "rode06.jpg",
       "title": "Guest bedroom 2"
     },
     {
-      "path": "dom1j.jpg",
+      "path": "rode07.jpg",
       "title": "Guest bedroom 2 feature wall"
     },
     {
-      "path": "dom1a.jpg",
+      "path": "rode01.jpg",
       "title": "Guest bedroom 3"
     }
   ]

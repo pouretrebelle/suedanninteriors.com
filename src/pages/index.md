@@ -6,7 +6,7 @@ slug: 'index'
 
 We offer a complete Interior Design service to domestic and commercial clients.
 
-Sue Dann Interiors is a BIID recognised Interior Design practice established for 15 years led by a professional and creative designer with over 30 years design experience.
+Sue Dann Interiors is a BIID recognised Interior Design practice led by a professional and creative designer with over 35 years design experience.
 
 ---
 

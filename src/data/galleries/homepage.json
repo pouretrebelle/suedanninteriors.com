@@ -1,27 +1,27 @@
 {
   "slug": "homepage",
   "images": [{
-      "path": "home01.jpg",
+      "path": "homepage01.jpg",
       "title": ""
     },
     {
-      "path": "home03.jpg",
+      "path": "homepage03.jpg",
       "title": ""
     },
     {
-      "path": "home05.jpg",
+      "path": "homepage06.jpg",
       "title": ""
     },
     {
-      "path": "home06.jpg",
+      "path": "homepage05.jpg",
       "title": ""
     },
     {
-      "path": "home04.jpg",
+      "path": "homepage02.jpg",
       "title": ""
     },
     {
-      "path": "home07.jpg",
+      "path": "homepage04.jpg",
       "title": ""
     }
   ]

@@ -41,12 +41,12 @@
       "path---kitchens-9ae82170f1b70e669258.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-c8f0e3ea0bcb19b68d28.js",
-      "component---src-layouts-index-js-c8f0e3ea0bcb19b68d28.js.map"
+      "component---src-layouts-index-js-4c4b8a54d585ca36d94a.js",
+      "component---src-layouts-index-js-4c4b8a54d585ca36d94a.js.map"
     ],
     "path---domestic": [
-      "path---domestic-c6b00295786f5db8e1c9.js",
-      "path---domestic-c6b00295786f5db8e1c9.js.map"
+      "path---domestic-f9af393c0afb9111eeeb.js",
+      "path---domestic-f9af393c0afb9111eeeb.js.map"
     ],
     "component---src-templates-gallery-page-js": [
       "component---src-templates-gallery-page-js-076071936e35ed703612.js",
@@ -86,6 +86,10 @@
       "component---src-pages-press-js-b774ce57e2c11aa70a83.js",
       "component---src-pages-press-js-b774ce57e2c11aa70a83.js.map"
     ],
+    "path---domestic-2016-london-penthouse": [
+      "path---domestic-2016-london-penthouse-fc7a40f8205f798ef6d8.js",
+      "path---domestic-2016-london-penthouse-fc7a40f8205f798ef6d8.js.map"
+    ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
@@ -99,17 +103,17 @@
       "path---contact-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-testimonials-js": [
-      "component---src-pages-testimonials-js-afb8b635f78a6530efcc.js",
-      "component---src-pages-testimonials-js-afb8b635f78a6530efcc.js.map"
+      "component---src-pages-testimonials-js-7ee4cfd26ff8fa93749a.js",
+      "component---src-pages-testimonials-js-7ee4cfd26ff8fa93749a.js.map"
     ],
     "path---domestic-2011-period-cottage": [
       "path---domestic-2011-period-cottage-f2e1e637925dd2086279.js",
       "path---domestic-2011-period-cottage-f2e1e637925dd2086279.js.map"
     ],
     "app": [
-      "app-5724a6f7ca5b164bea55.js",
+      "app-39943dcb538c4376edd6.js",
       "build-js-styles.css",
-      "app-5724a6f7ca5b164bea55.js.map",
+      "app-39943dcb538c4376edd6.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -121,8 +125,8 @@
       "path---press-f8d4644332281b6aff00.js.map"
     ],
     "path---testimonials": [
-      "path---testimonials-36028092cfe61b6bad44.js",
-      "path---testimonials-36028092cfe61b6bad44.js.map"
+      "path---testimonials-8eb2a0f7accf4e4e7955.js",
+      "path---testimonials-8eb2a0f7accf4e4e7955.js.map"
     ],
     "path---domestic-2014-modern-house": [
       "path---domestic-2014-modern-house-05ee60a0b6642a52ac09.js",

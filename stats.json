@@ -36,6 +36,10 @@
       "component---src-pages-contact-js-6ff96da5dfdc757e3f27.js",
       "component---src-pages-contact-js-6ff96da5dfdc757e3f27.js.map"
     ],
+    "path---domestic-2018-alpine-chalet": [
+      "path---domestic-2018-alpine-chalet-0d0e8c940f0bd8eb003c.js",
+      "path---domestic-2018-alpine-chalet-0d0e8c940f0bd8eb003c.js.map"
+    ],
     "path---kitchens": [
       "path---kitchens-9ae82170f1b70e669258.js",
       "path---kitchens-9ae82170f1b70e669258.js.map"
@@ -45,8 +49,8 @@
       "component---src-layouts-index-js-4c4b8a54d585ca36d94a.js.map"
     ],
     "path---domestic": [
-      "path---domestic-0d22cab23c5b7dcfd0c5.js",
-      "path---domestic-0d22cab23c5b7dcfd0c5.js.map"
+      "path---domestic-38956312f89f140e2b26.js",
+      "path---domestic-38956312f89f140e2b26.js.map"
     ],
     "component---src-templates-gallery-page-js": [
       "component---src-templates-gallery-page-js-076071936e35ed703612.js",
@@ -111,9 +115,9 @@
       "path---domestic-2011-period-cottage-f2e1e637925dd2086279.js.map"
     ],
     "app": [
-      "app-da0914f5c4b12cf86b95.js",
+      "app-e74be274394b99818f8c.js",
       "build-js-styles.css",
-      "app-da0914f5c4b12cf86b95.js.map",
+      "app-e74be274394b99818f8c.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -125,8 +129,8 @@
       "path---press-f8d4644332281b6aff00.js.map"
     ],
     "path---testimonials": [
-      "path---testimonials-0bb33f4f3d285510d106.js",
-      "path---testimonials-0bb33f4f3d285510d106.js.map"
+      "path---testimonials-1413704ba1feec03738b.js",
+      "path---testimonials-1413704ba1feec03738b.js.map"
     ],
     "path---domestic-2014-modern-house": [
       "path---domestic-2014-modern-house-05ee60a0b6642a52ac09.js",

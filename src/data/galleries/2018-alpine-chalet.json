@@ -1,0 +1,36 @@
+{
+  "slug": "2018-alpine-chalet",
+  "images": [{
+    "path": "chalet01.jpg"
+  }, {
+    "path": "chalet02.jpg"
+  }, {
+    "path": "chalet03.jpg"
+  }, {
+    "path": "chalet04.jpg"
+  }, {
+    "path": "chalet05.jpg"
+  }, {
+    "path": "chalet06.jpg"
+  }, {
+    "path": "chalet07.jpg"
+  }, {
+    "path": "chalet08.jpg"
+  }, {
+    "path": "chalet09.jpg"
+  }, {
+    "path": "chalet10.jpg"
+  }, {
+    "path": "chalet10.jpg"
+  }, {
+    "path": "chalet11.jpg"
+  }, {
+    "path": "chalet12.jpg"
+  }, {
+    "path": "chalet13.jpg"
+  }, {
+    "path": "chalet14.jpg"
+  }, {
+    "path": "chalet15.jpg"
+  }]
+}

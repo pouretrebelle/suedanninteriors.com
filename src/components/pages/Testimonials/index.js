@@ -9,15 +9,17 @@ import styles from './Testimonials.module.sass';
 
 const Testimonials = ({ testimonials }) => (
   <div>
-    <PageHeader title="Testimonials" />
+    <PageHeader title='Testimonials' />
 
     {testimonials.map((testimonial, i) => (
       <CaseStudy
-        studies={[{
-          link: testimonial.caseStudyLink,
-          title: testimonial.caseStudyTitle,
-          cover: testimonial.caseStudyCover,
-        }]}
+        studies={[
+          {
+            link: testimonial.caseStudyLink,
+            title: testimonial.caseStudyTitle,
+            cover: testimonial.caseStudyCover,
+          },
+        ]}
         key={i}
         className={styles.article}
       >
@@ -25,15 +27,12 @@ const Testimonials = ({ testimonials }) => (
           className={styles.quote}
           dangerouslySetInnerHTML={{ __html: testimonial.html }}
         />
-        <cite className={styles.quoteName}>
-          {testimonial.name}
-        </cite>
-        <h4 className={styles.quoteAddress}>
-          {testimonial.address}
-        </h4>
+        <cite className={styles.quoteName}>{testimonial.name}</cite>
+        {testimonial.address && (
+          <h4 className={styles.quoteAddress}>{testimonial.address}</h4>
+        )}
       </CaseStudy>
     ))}
-
   </div>
 );
 
@@ -45,6 +44,6 @@ Testimonials.propTypes = {
       html: PropTypes.string,
     })
   ),
-}
+};
 
 export default Testimonials;

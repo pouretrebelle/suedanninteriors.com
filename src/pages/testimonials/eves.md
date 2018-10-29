@@ -1,7 +1,6 @@
 ---
 type: 'testimonial'
-name: Mr & Mrs Eve
-address: Sydney Place, Bath
+name: Mr & Mrs Charles Eve
 
 caseStudyTitle: 'Case Study: Georgian Apartment in Sydney Place, Bath'
 caseStudyLink: '/domestic/2008-georgian-apartment'

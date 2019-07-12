@@ -7,18 +7,39 @@ import Gallery from '../../common/Gallery';
 
 import styles from './Press.module.sass';
 
-const PressPage = ({ images }) => (
+const PressPage = ({ galleries }) => (
   <div>
-    <PageHeader title="Press" />
+    <PageHeader title='Press' />
 
     <Gallery
-      images={images}
+      images={galleries['press-wiltshire-living']}
+      gridClassName={styles.gallery}
+      aspectRatio={1.414}
+    />
+    <PageContent>
+      <ul className={styles.pressList}>
+        <li className={styles.pressItem}>
+          <h2 className={styles.pressItemTitle}>
+            <a
+              href={'/assets/southwiltshirelivingarticle.pdf'}
+              target={'_blank'}
+            >
+              Keeping Homes Fashionable
+            </a>
+          </h2>
+          <p className={styles.pressItemOrigin}>Wiltshire Living</p>
+          <time className={styles.pressItemTime}>July 2019</time>
+        </li>
+      </ul>
+    </PageContent>
+
+    <Gallery
+      images={galleries['press-self-build-design']}
       gridClassName={styles.gallery}
       aspectRatio={1.414}
     />
 
     <PageContent>
-
       <ul className={styles.pressList}>
         <li className={styles.pressItem}>
           <h2 className={styles.pressItemTitle}>
@@ -52,13 +73,13 @@ const PressPage = ({ images }) => (
 
       <ul className={styles.linkList}>
         <li className={styles.linkItem}>
-          <a href="http://biid.org.uk/member/sue-dann" className={styles.link}>
+          <a href='http://biid.org.uk/member/sue-dann' className={styles.link}>
             Sue Dann on the British Institute of Interior Design
           </a>
         </li>
         <li className={styles.linkItem}>
           <a
-            href="http://www.houzz.co.uk/pro/suedann/sue-dann-interiors"
+            href='http://www.houzz.co.uk/pro/suedann/sue-dann-interiors'
             className={styles.link}
           >
             Sue Dann on Houzz
@@ -70,12 +91,7 @@ const PressPage = ({ images }) => (
 );
 
 PressPage.propTypes = {
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      path: PropTypes.string,
-    })
-  ),
-}
+  galleries: PropTypes.object,
+};
 
 export default PressPage;

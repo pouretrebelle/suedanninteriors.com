@@ -3,7 +3,7 @@ type: 'case-study'
 slug: '2018-alpine-chalet'
 date: '2018'
 title: 'Duplex Apartment in Val D’Isere, French Alps'
-cover: 'chalet16.jpg'
+cover: 'choucas-cover.jpg'
 ---
 
 My clients came to me in the summer of 2017 with this project.

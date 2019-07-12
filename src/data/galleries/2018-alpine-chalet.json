@@ -1,36 +1,92 @@
 {
   "slug": "2018-alpine-chalet",
-  "images": [{
-    "path": "chalet01.jpg"
-  }, {
-    "path": "chalet02.jpg"
-  }, {
-    "path": "chalet03.jpg"
-  }, {
-    "path": "chalet04.jpg"
-  }, {
-    "path": "chalet05.jpg"
-  }, {
-    "path": "chalet06.jpg"
-  }, {
-    "path": "chalet07.jpg"
-  }, {
-    "path": "chalet08.jpg"
-  }, {
-    "path": "chalet09.jpg"
-  }, {
-    "path": "chalet10.jpg"
-  }, {
-    "path": "chalet10.jpg"
-  }, {
-    "path": "chalet11.jpg"
-  }, {
-    "path": "chalet12.jpg"
-  }, {
-    "path": "chalet13.jpg"
-  }, {
-    "path": "chalet14.jpg"
-  }, {
-    "path": "chalet15.jpg"
-  }]
+  "images": [
+    {
+      "path": "416_CHOUCAS_199_1.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_202_1.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_209_1.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_219.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_225.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_229.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_237.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_242.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_251.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_255.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_271.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_278.jpg"
+    },
+    {
+      "path": "416_CHOUCAS_286.jpg"
+    },
+    {
+      "path": "chalet01.jpg"
+    },
+    {
+      "path": "chalet02.jpg"
+    },
+    {
+      "path": "chalet03.jpg"
+    },
+    {
+      "path": "chalet04.jpg"
+    },
+    {
+      "path": "chalet05.jpg"
+    },
+    {
+      "path": "chalet06.jpg"
+    },
+    {
+      "path": "chalet07.jpg"
+    },
+    {
+      "path": "chalet08.jpg"
+    },
+    {
+      "path": "chalet09.jpg"
+    },
+    {
+      "path": "chalet10.jpg"
+    },
+    {
+      "path": "chalet10.jpg"
+    },
+    {
+      "path": "chalet11.jpg"
+    },
+    {
+      "path": "chalet12.jpg"
+    },
+    {
+      "path": "chalet13.jpg"
+    },
+    {
+      "path": "chalet14.jpg"
+    },
+    {
+      "path": "chalet15.jpg"
+    }
+  ]
 }

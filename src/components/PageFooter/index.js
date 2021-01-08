@@ -25,7 +25,7 @@ class PageFooter extends Component {
         </p>
 
         <div className={styles.biidWrapper}>
-          <a href="http://www.biid.org.uk/member/sue-dann-interiors/">
+          <a href="https://biid.org.uk/users/sue-dann">
             <img
               src={require('../../assets/biid.png')}
               alt="Sue is a member of the British Institute of Interior Design"

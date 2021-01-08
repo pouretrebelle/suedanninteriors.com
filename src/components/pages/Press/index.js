@@ -73,7 +73,7 @@ const PressPage = ({ galleries }) => (
 
       <ul className={styles.linkList}>
         <li className={styles.linkItem}>
-          <a href='http://biid.org.uk/member/sue-dann' className={styles.link}>
+          <a href='https://biid.org.uk/users/sue-dann' className={styles.link}>
             Sue Dann on the British Institute of Interior Design
           </a>
         </li>

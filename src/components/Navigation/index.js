@@ -160,7 +160,7 @@ class Navigation extends Component {
 
         <div className={styles.biidWrapper}>
           <a 
-            href="http://www.biid.org.uk/member/sue-dann-interiors/"
+            href="https://biid.org.uk/users/sue-dann"
             alt="Sue is a member of the British Institute of Interior Design"
           >
             <CloudinaryImage

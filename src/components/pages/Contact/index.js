@@ -31,29 +31,11 @@ class ContactPage  extends Component {
 
         <PageContent>
           <p>
-            Our Pewsey studio / showroom is open for apointment only; please contact
-            us by email or telephone to arrange a meeting
+            Our Truro studio / showroom is open for appointment only; please contact
+            us by email or telephone to arrange a meeting.
           </p>
           <p>
             <dl className={styles.contactList}>
-              <dt className={styles.contactTerm}>
-                Tel Pewsey
-              </dt>
-              <dd className={styles.contactDescription}>
-                +44 (0) 1672 562275
-              </dd>
-              <dt className={styles.contactTerm}>
-                Tel Bath
-              </dt>
-              <dd className={styles.contactDescription}>
-                +44 (0) 1225 341501
-              </dd>
-              <dt className={styles.contactTerm}>
-                Fax
-              </dt>
-              <dd className={styles.contactDescription}>
-                +44 (0) 872 011 4572
-              </dd>
               <dt className={styles.contactTerm}>
                 Mob
               </dt>
@@ -75,12 +57,14 @@ class ContactPage  extends Component {
             </dl>
           </p>
           <p>
-            Sue Dann Interiors<br />
-            Unit 24<br />
-            Salisbury Road Business Park<br />
-            Pewsey<br />
-            Wiltshire<br />
-            SN9 5PZ<br />
+            Sue Dann Interiors <br />
+            Studio S14 <br />
+            Old Bakery Studios <br />
+            Blewetts Wharf <br />
+            Malpas Road <br />
+            Truro <br />
+            Cornwall <br />
+            TR1 1QH <br />
             United Kingdom
           </p>
         </PageContent>

@@ -11,8 +11,7 @@ class PageFooter extends Component {
     return (
       <div className={styles.footer}>
         <p>
-          Sue Dann Interiors, Unit 24, Salisbury Road Business Park, Pewsey,
-          Wiltshire, SN9 5PZ. United Kingdom
+          Sue&nbsp;Dann&nbsp;Interiors, Studio&nbsp;S14, Old&nbsp;Bakery&nbsp;Studios, Blewetts&nbsp;Wharf, Malpas&nbsp;Road, Truro, Cornwall, TR1&nbsp;1QH. United Kingdom
         </p>
         <p>
           Tel: +44 (0) 167 256 2275 | Fax: +44 (0) 872 011 4572 | Mob: +44 (0) 7836 358 635

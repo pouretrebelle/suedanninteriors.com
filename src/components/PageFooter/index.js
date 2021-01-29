@@ -14,7 +14,7 @@ class PageFooter extends Component {
           Sue&nbsp;Dann&nbsp;Interiors, Studio&nbsp;S14, Old&nbsp;Bakery&nbsp;Studios, Blewetts&nbsp;Wharf, Malpas&nbsp;Road, Truro, Cornwall, TR1&nbsp;1QH. United Kingdom
         </p>
         <p>
-          Tel: +44 (0) 167 256 2275 | Fax: +44 (0) 872 011 4572 | Mob: +44 (0) 7836 358 635
+          Cornwall: +44&nbsp;(0)&nbsp;187&nbsp;285&nbsp;7249 | Mob: +44&nbsp;(0)&nbsp;7836&nbsp;358&nbsp;635
         </p>
         <p>
           E:{' '}

@@ -13,6 +13,6 @@ The work included designing textiles and colour forecasting as well as designing
 
 Her wide spectrum of abilities within the design field were easily transposed into the Interior Design Industry when she set up Sue Dann Interiors in 1998 after completing an Interior Design course at the KLC School of Interior Design in London.
 
-Since setting up Sue Dann Interiors, Sue has undertaken many projects icluding complete renovations and redecoration of listed properties in Bucks. Surrey and Somerset as well as many Hotel projects around the country.
+Since setting up Sue Dann Interiors, Sue has undertaken many projects including complete renovations and redecoration of listed properties in Bucks. Surrey and Somerset as well as many Hotel projects around the country.
 
 Sue Dann is a Member of [The British Institute of Interior Design](https://biid.org.uk/users/sue-dann).

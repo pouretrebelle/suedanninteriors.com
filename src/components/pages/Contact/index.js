@@ -58,7 +58,7 @@ class ContactPage  extends Component {
           </p>
           <p>
             Sue Dann Interiors <br />
-            Studio S14 <br />
+            Studio S13B <br />
             Old Bakery Studios <br />
             Blewetts Wharf <br />
             Malpas Road <br />

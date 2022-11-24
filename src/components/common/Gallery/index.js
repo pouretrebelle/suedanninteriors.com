@@ -92,6 +92,8 @@ class Gallery extends Component {
       [gridClassName]: !!gridClassName,
     })
 
+    if (!images || !images.length) return null
+
     return (
       <div>
         { this.lightboxOpen &&

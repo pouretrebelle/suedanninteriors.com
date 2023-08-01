@@ -21,6 +21,10 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1"
   },
+  "engines": {
+    "node": "12.20.x",
+    "npm": "6.15.x"
+  },
   "keywords": [
     "gatsby"
   ],

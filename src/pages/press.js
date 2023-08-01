@@ -17,7 +17,7 @@ const PressPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query PressPages {
-    allGalleriesJson(filter: { slug: { regex: "/^press.+/gm" } }) {
+    allGalleriesJson(filter: { slug: { regex: "/^press.+/" } }) {
       edges {
         node {
           slug

@@ -20,6 +20,10 @@
       "component---src-templates-plain-page-js-d201fb41beb374eb0681.js",
       "component---src-templates-plain-page-js-d201fb41beb374eb0681.js.map"
     ],
+    "path---domestic-2021-country-mansion": [
+      "path---domestic-2021-country-mansion-3b74c52a776304afa252.js",
+      "path---domestic-2021-country-mansion-3b74c52a776304afa252.js.map"
+    ],
     "path---": [
       "path----ad376fe5476c85c27519.js",
       "path----ad376fe5476c85c27519.js.map"
@@ -33,8 +37,8 @@
       "path---domestic-2004-converted-victorian-school-866ea181fe02ffbb8853.js.map"
     ],
     "component---src-pages-contact-js": [
-      "component---src-pages-contact-js-a70348b184dcec88dbcb.js",
-      "component---src-pages-contact-js-a70348b184dcec88dbcb.js.map"
+      "component---src-pages-contact-js-881d406e3275efbd6a45.js",
+      "component---src-pages-contact-js-881d406e3275efbd6a45.js.map"
     ],
     "path---domestic-2018-alpine-chalet": [
       "path---domestic-2018-alpine-chalet-d58b5f9bdaaa67dacbae.js",
@@ -45,12 +49,12 @@
       "path---kitchens-9ae82170f1b70e669258.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-e1d3f2f298133df9b1fd.js",
-      "component---src-layouts-index-js-e1d3f2f298133df9b1fd.js.map"
+      "component---src-layouts-index-js-1ef38b7be8fa3c244860.js",
+      "component---src-layouts-index-js-1ef38b7be8fa3c244860.js.map"
     ],
     "path---domestic": [
-      "path---domestic-ebc841e8555794463860.js",
-      "path---domestic-ebc841e8555794463860.js.map"
+      "path---domestic-30849e69230ced8c09c9.js",
+      "path---domestic-30849e69230ced8c09c9.js.map"
     ],
     "component---src-templates-gallery-page-js": [
       "component---src-templates-gallery-page-js-076071936e35ed703612.js",
@@ -61,8 +65,8 @@
       "path---commercial-3b3abcbcdc0bf5316167.js.map"
     ],
     "path---index": [
-      "path---index-bfc6deec2934100b6588.js",
-      "path---index-bfc6deec2934100b6588.js.map"
+      "path---index-f6aaa5f2544da39c2ae3.js",
+      "path---index-f6aaa5f2544da39c2ae3.js.map"
     ],
     "component---src-templates-case-study-js": [
       "component---src-templates-case-study-js-6486d521230cbd678b32.js",
@@ -81,14 +85,14 @@
       "path---domestic-2008-georgian-apartment-b3e5ff9793d88fa3e33f.js.map"
     ],
     "commons": [
-      "commons-7dc7ec7f87b8e97a402c.js",
+      "commons-8b1060a2e58704a804b7.js",
       "build-js-styles.css",
-      "commons-7dc7ec7f87b8e97a402c.js.map",
+      "commons-8b1060a2e58704a804b7.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-press-js": [
-      "component---src-pages-press-js-f3cbad342e7a1f1e0418.js",
-      "component---src-pages-press-js-f3cbad342e7a1f1e0418.js.map"
+      "component---src-pages-press-js-8b5b53a4ece047ad15e7.js",
+      "component---src-pages-press-js-8b5b53a4ece047ad15e7.js.map"
     ],
     "path---domestic-2016-london-penthouse": [
       "path---domestic-2016-london-penthouse-fc7a40f8205f798ef6d8.js",
@@ -99,8 +103,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---sue-dann-profile": [
-      "path---sue-dann-profile-3b0b3c044aa2533ff26f.js",
-      "path---sue-dann-profile-3b0b3c044aa2533ff26f.js.map"
+      "path---sue-dann-profile-99d9544f057f8b874f6a.js",
+      "path---sue-dann-profile-99d9544f057f8b874f6a.js.map"
     ],
     "path---contact": [
       "path---contact-a0e39f21c11f6a62c5ab.js",
@@ -115,9 +119,9 @@
       "path---domestic-2011-period-cottage-f2e1e637925dd2086279.js.map"
     ],
     "app": [
-      "app-9d6e6bafa830ec271ba4.js",
+      "app-07620263099a821e7c17.js",
       "build-js-styles.css",
-      "app-9d6e6bafa830ec271ba4.js.map",
+      "app-07620263099a821e7c17.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -125,12 +129,12 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---press": [
-      "path---press-ba17be1bdd2fddf1f6e3.js",
-      "path---press-ba17be1bdd2fddf1f6e3.js.map"
+      "path---press-ab91adcff89bf9974f14.js",
+      "path---press-ab91adcff89bf9974f14.js.map"
     ],
     "path---testimonials": [
-      "path---testimonials-9d0e99df5a28db943206.js",
-      "path---testimonials-9d0e99df5a28db943206.js.map"
+      "path---testimonials-bc663994b135ea534576.js",
+      "path---testimonials-bc663994b135ea534576.js.map"
     ],
     "path---domestic-2014-modern-house": [
       "path---domestic-2014-modern-house-05ee60a0b6642a52ac09.js",

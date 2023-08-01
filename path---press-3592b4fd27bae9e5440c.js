@@ -1,0 +1,2 @@
+webpackJsonp([0xe928a2944162],{495:function(e,i){e.exports={data:{allGalleriesJson:{edges:[{node:{slug:"press-self-build-design",images:[{title:"Enhancing the Flow in SelfBuild & Design Magazine",path:"selfbuilddesignarticle_Page_1.jpg"},{title:"Enhancing the Flow in SelfBuild & Design Magazine",path:"selfbuilddesignarticle_Page_2.jpg"},{title:"Enhancing the Flow in SelfBuild & Design Magazine",path:"selfbuilddesignarticle_Page_3.jpg"}]}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---press-3592b4fd27bae9e5440c.js.map

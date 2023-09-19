@@ -11,7 +11,7 @@ class PageFooter extends Component {
     return (
       <div className={styles.footer}>
         <p>
-          Sue&nbsp;Dann&nbsp;Interiors, Studio&nbsp;S13B, Old&nbsp;Bakery&nbsp;Studios, Blewetts&nbsp;Wharf, Malpas&nbsp;Road, Truro, Cornwall, TR1&nbsp;1QH
+          Sue&nbsp;Dann&nbsp;Interiors, The&nbsp;Studio, 20&nbsp;Palmer&nbsp;Street, South&nbsp;Petherton, Somerset, TA13&nbsp;5DD
         </p>
         <p>
           E:{' '}

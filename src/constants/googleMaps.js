@@ -1,12 +1,13 @@
 export const GOOGLE_MAPS_MARKER = {
-  lat: 50.2625089,
-  lng: -5.046751,
+  lat: 50.948548,
+  lng: -2.814260,
 };
 export const GOOGLE_MAPS_CENTER = {
-  lat: 50.2625089,
-  lng: -5.046751,
+  lat: 51,
+  lng: -3,
 };
-export const GOOGLE_MAPS_API_KEY = 'AIzaSyBIrGGk2luGTi-UjXjjB8NMp666e-GTzJY';
-export const GOOGLE_MAPS_ZOOM = 11;
+
+export const GOOGLE_MAPS_API_KEY = 'AIzaSyDNhSFy7l0zZGysQIkrfpaLVFYzvZVoLk8';
+export const GOOGLE_MAPS_ZOOM = 9;
 export const GOOGLE_MAPS_REDIRECT_URL =
-  "https://www.google.com/maps/place/Old+Bakery+Studios/@50.2623495,-5.0494452,16.38z/data=!4m5!3m4!1s0x0:0x45f2e9b690137b15!8m2!3d50.2624472!4d-5.0465083";
+  "https://www.google.com/maps/place/20+Palmer+St,+South+Petherton+TA13+5DD/@50.9489801,-2.8286721,14.47z/";

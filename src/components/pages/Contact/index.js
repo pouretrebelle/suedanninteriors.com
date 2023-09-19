@@ -31,7 +31,7 @@ class ContactPage  extends Component {
 
         <PageContent>
           <p>
-            Our Truro studio / showroom is open for appointment only; please contact
+            Our Somerset studio / showroom is open for appointment only; please contact
             us by email or telephone to arrange a meeting.
           </p>
           <p>
@@ -58,13 +58,11 @@ class ContactPage  extends Component {
           </p>
           <p>
             Sue Dann Interiors <br />
-            Studio S13B <br />
-            Old Bakery Studios <br />
-            Blewetts Wharf <br />
-            Malpas Road <br />
-            Truro <br />
-            Cornwall <br />
-            TR1 1QH <br />
+            The Studio <br />
+            20 Palmer Street <br />
+            South Petherton <br />
+            Somerset <br />
+            TA13 5DD <br />
             United Kingdom
           </p>
         </PageContent>

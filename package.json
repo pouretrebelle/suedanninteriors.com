@@ -22,8 +22,8 @@
     "react-router-dom": "^4.3.1"
   },
   "engines": {
-    "node": "12.20.x",
-    "npm": "6.15.x"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "keywords": [
     "gatsby"
@@ -33,7 +33,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -u \"Charlotte Dann <hi@cha.rs>\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
